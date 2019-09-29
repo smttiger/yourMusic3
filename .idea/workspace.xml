@@ -2,62 +2,77 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1bdbf51d-be67-41f7-8cc0-306cc09c1210" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAppYourMusic.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audio/23565afe-0540-418d-bee3-6f0388732a61Koala.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audio/28c28d53-97c6-40d4-bcc9-77b1bfcdb8691.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audio/6d7835c1-59c8-44ad-9494-ea889b3d7743Koala.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audio/96416ac4-e0ff-4ca5-9a08-0187c6641c54Koala.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audio/Green day-Wake me up when september ends.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audio/Koala.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audio/c6c74a78-204b-4f6a-a121-1a34f24e7980bird.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/Config/MvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/Config/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/controller/RegistrationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/controller/SongController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/domain/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/domain/Song.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/domain/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/repository/SongRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/repository/UserRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/main.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/login.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/Application.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/Config/MvcConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/Config/WebSecurityConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/controller/RegistrationController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/controller/SongController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/domain/Role.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/domain/Song.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/domain/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/repository/SongRepo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/repository/UserRepo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/greeting.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/login.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/main.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/parts/common.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/parts/login.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/registration.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audio/Green day -Boulevard of broken dreams.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audio/Green day-Extraordinary girl.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audio/Nickelback-Do This Anymore.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audio/Nickelback-How you remind me.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audio/Nickelback-Someday.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audio/Rasmus-Black roses.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audio/Rasmus-Falling.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audio/Rasmus-Heartbreaker.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/23565afe-0540-418d-bee3-6f0388732a61Koala.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/28c28d53-97c6-40d4-bcc9-77b1bfcdb8691.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/6d7835c1-59c8-44ad-9494-ea889b3d7743Koala.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/96416ac4-e0ff-4ca5-9a08-0187c6641c54Koala.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/Koala.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/c6c74a78-204b-4f6a-a121-1a34f24e7980bird.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/controller/SongController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/controller/SongController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/domain/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/domain/Song.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/controller/SongController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/controller/SongController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/domain/Song.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/domain/Song.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main.ftl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Music" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Music" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Music" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="Music: database" type="162271b6:PgImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Music" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="Music: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Music" type="feb32156:DbDataSourceImpl" />
+        <item name="roles" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -85,11 +100,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569435845286" />
@@ -141,6 +158,21 @@
       </method>
     </configuration>
   </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@8fcf2472" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -161,7 +193,9 @@
       <workItem from="1569671412509" duration="250000" />
       <workItem from="1569671826884" duration="11898000" />
       <workItem from="1569685682816" duration="160000" />
-      <workItem from="1569753443919" duration="364000" />
+      <workItem from="1569753443919" duration="989000" />
+      <workItem from="1569754491193" duration="83000" />
+      <workItem from="1569754734618" duration="4428000" />
     </task>
     <task id="LOCAL-00001" summary="freemarker was added">
       <created>1569271303232</created>
@@ -170,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569271303232</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="playing works">
+      <created>1569753967778</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1569753967778</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +233,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="freemarker was added" />
-    <option name="LAST_COMMIT_MESSAGE" value="freemarker was added" />
+    <MESSAGE value="playing works" />
+    <option name="LAST_COMMIT_MESSAGE" value="playing works" />
   </component>
 </project>

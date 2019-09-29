@@ -5,28 +5,22 @@
         <@l.logout />
     </div>
     <div>
-        <form method="post" enctype="multipart/form-data">
+        <form method="post" >
             <input type="hidden" name="_csrf" value="${_csrf.token}"/>
             <input type="text" name="artist" placeholder="enter artist">
             <input type="text" name="name" placeholder="enter name of song">
-            <input type="file" name="file">
+<#--            <input type="file" name="file">-->
             <button type="submit">Upload</button>
         </form>
     </div>
     <div>List of songs</div>
     <#list songs as song>
         <div>
-            <b>${song.id}</b>
-            <span>${song.artist}</span>
+            <b>${song.artist}</b>
             <i>${song.name}</i>
-            <i>${song.filename}</i>
-<#--            <div>-->
-<#--            <#if song.filename??>-->
-<#--                <img src="/aud/${song.filename}" >-->
-<#--                <br>-->
-<#--            </#if>-->
-<#--        </div>-->
+                <audio src="/aud/${song.filename}" controls ></audio>
         </div>
+        <br>
     <#else>
         Song was not found
     </#list>
@@ -46,7 +40,6 @@
     </div>
 
     <audio src="/aud/Green day-Wake me up when september ends.mp3" controls></audio>
-    <br>
-    <img src="/aud/Koala.jpg">
+
 
 </@c.page>
