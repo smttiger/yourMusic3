@@ -2,8 +2,10 @@
 <#import "parts/login.ftl" as l>
 
 <@c.page>
-    <div>Please, login or create account</div>
-    <@l.login "/login" />
+    <div class="container mt-5">Please, login</div>
+    <br>
+    <br>
+    <br>
+    <@l.login "/login" false />
 
-<a href="/registration">Create account</a>
 </@c.page>

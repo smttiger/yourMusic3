@@ -2,9 +2,8 @@
 <#import "parts/login.ftl" as l>
 
 <@c.page>
-Create account
-
-<@l.login "/registration" />
+   <div class="mb-3">Create a new account</div>
+<@l.login "/registration" true />
     <br>
     ${message?ifExists}
 </@c.page>

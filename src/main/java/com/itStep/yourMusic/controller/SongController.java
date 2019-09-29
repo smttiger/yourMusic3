@@ -67,7 +67,6 @@ public class SongController {
             songs = songRepo.findByArtist(search);
         } else songs = songRepo.findAll();
         model.put("songs", songs);
-//        return "main";
         return "search results";
     }
 
