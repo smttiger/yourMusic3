@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1bdbf51d-be67-41f7-8cc0-306cc09c1210" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebAppYourMusic.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audio/23565afe-0540-418d-bee3-6f0388732a61Koala.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audio/28c28d53-97c6-40d4-bcc9-77b1bfcdb8691.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audio/6d7835c1-59c8-44ad-9494-ea889b3d7743Koala.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audio/96416ac4-e0ff-4ca5-9a08-0187c6641c54Koala.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audio/Green day-Wake me up when september ends.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audio/Koala.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audio/c6c74a78-204b-4f6a-a121-1a34f24e7980bird.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/Config/MvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/Config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/controller/RegistrationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/controller/SongController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/domain/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/domain/Song.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/domain/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/repository/SongRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/repository/UserRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/main.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/login.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/Application.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/Config/MvcConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/Config/WebSecurityConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/controller/RegistrationController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/controller/SongController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/domain/Role.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/domain/Song.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/domain/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/repository/SongRepo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/repository/UserRepo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/greeting.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/login.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/main.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/parts/common.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/parts/login.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/registration.ftl" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+        <option value="Interface" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1RNcp2YdeMNhVCWd1xiGBDqeqCJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569435845286" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WebAppYourMusic\src\main\resources\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WebAppYourMusic" />
+      <recent name="D:\WebAppYourMusic\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Application">
+    <configuration name="Application" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.itStep.yourMusic.Application" />
+      <module name="yourMusic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itStep.yourMusic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="yourMusic" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itStep.yourMusic.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1bdbf51d-be67-41f7-8cc0-306cc09c1210" name="Default Changelist" comment="" />
+      <created>1568735033379</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1568735033379</updated>
+      <workItem from="1569511183675" duration="1644000" />
+      <workItem from="1569513390601" duration="1057000" />
+      <workItem from="1569518650405" duration="1971000" />
+      <workItem from="1569592015016" duration="290000" />
+      <workItem from="1569592391817" duration="1199000" />
+      <workItem from="1569603089051" duration="6568000" />
+      <workItem from="1569618114210" duration="850000" />
+      <workItem from="1569671412509" duration="250000" />
+      <workItem from="1569671826884" duration="11898000" />
+      <workItem from="1569685682816" duration="160000" />
+      <workItem from="1569753443919" duration="364000" />
+    </task>
+    <task id="LOCAL-00001" summary="freemarker was added">
+      <created>1569271303232</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1569271303232</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="freemarker was added" />
+    <option name="LAST_COMMIT_MESSAGE" value="freemarker was added" />
+  </component>
+</project>
