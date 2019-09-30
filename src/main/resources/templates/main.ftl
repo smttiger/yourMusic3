@@ -3,17 +3,6 @@
 <@c.page>
 <br>
     <br>
-<#--    <div>-->
-<#--        <form method="post" >-->
-<#--            <input type="hidden" name="_csrf" value="${_csrf.token}"/>-->
-<#--            <input type="text" name="artist" placeholder="enter artist">-->
-<#--            <input type="text" name="name" placeholder="enter name of song">-->
-<#--&lt;#&ndash;            <input type="file" name="file">&ndash;&gt;-->
-<#--            <button type="submit">Upload</button>-->
-<#--        </form>-->
-
-
-
             <form method="post" action="search" >
                 <input type="hidden" name="_csrf" value="${_csrf.token}"/>
                 <div class="form-group row">

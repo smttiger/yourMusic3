@@ -18,6 +18,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="/login">Login</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/upload">Upload</a>
+            </li>
         </ul>
         <span class="navbar-text mr-3">${name}</span>
         <#if known>

@@ -17,7 +17,6 @@ public class Song {
     public Song(String artist, String name) {
         this.artist = artist;
         this.name = name;
-        this.filename=artist+"-"+name+".mp3";
     }
 
     public Song(){}
