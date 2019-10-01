@@ -12,4 +12,10 @@
             <input type="file" name="file" lang="en">
             <button class="btn btn-success" type="submit">Upload</button>
         </form>
+<br>
+
+    <#if uploadReport??>
+        <h5>${uploadReport}</h5>
+    </#if>
+
 </@c.page>

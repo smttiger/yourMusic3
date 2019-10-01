@@ -2,11 +2,14 @@
 <#import "parts/login.ftl" as l>
 <@c.page>
 <br>
+    <br>
     <h3>List of found songs</h3>
+    <br>
+    <br>
     <#list songs as song>
-        <div class="form-group row">
-            <b>${song.artist}</b>
-            <i>${song.name}</i>
+        <div >
+            <b>${song.artist}    </b>
+            <i>${song.name}    </i>
             <audio src="/aud/${song.filename}" controls ></audio>
         </div>
         <br>

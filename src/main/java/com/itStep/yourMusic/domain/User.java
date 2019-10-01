@@ -1,6 +1,7 @@
 package com.itStep.yourMusic.domain;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.Set;
 
 @Entity
@@ -9,7 +10,9 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @NotBlank(message = "Username cannot be empty")
     private String username;
+    @NotBlank(message = "Password cannot be empty")
     private String password;
     private boolean isActive;
     @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
@@ -19,6 +22,17 @@ public class User {
 
 
 
+    @OneToMany(cascade=CascadeType.ALL, fetch = FetchType.LAZY)
+    private Set<Playlist> playlists;
+
+
+    public Set<Playlist> getPlaylists() {
+        return playlists;
+    }
+
+    public void setPlaylists(Set<Playlist> playlists) {
+        this.playlists = playlists;
+    }
     public Long getId() {
         return id;
     }
