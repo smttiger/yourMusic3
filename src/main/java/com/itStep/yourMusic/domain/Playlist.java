@@ -1,9 +1,8 @@
 package com.itStep.yourMusic.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
+
 @Entity
 public class Playlist {
         @Id
@@ -11,11 +10,38 @@ public class Playlist {
         private Integer id;
         private String name;
 
-    public Playlist(String name) {
+        @ManyToOne(fetch = FetchType.LAZY)
+        @JoinColumn(name="user_id")
+        private User author;
+
+    @OneToMany(mappedBy = "playlist", cascade=CascadeType.ALL, fetch = FetchType.EAGER)
+    private Set<Song> playlistSongs;
+
+    public Set<Song> getPlaylistSongs() {
+        return playlistSongs;
+    }
+
+    public void setPlaylistSongs(Set<Song> playlistSongs) {
+        this.playlistSongs = playlistSongs;
+    }
+
+
+
+    public User getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(User author) {
+        this.author = author;
+    }
+
+
+
+    public Playlist(String name, User user) {
         this.name = name;
+        this.author=user;
     }
     public Playlist() {
-
     }
 
     public Integer getId() {

@@ -4,7 +4,6 @@
     <br>
     <h3>Upload your favourite song and everybody will enjoy it!</h3>
     <br>
-    <div>
         <form method="post" enctype="multipart/form-data" action="upload" >
             <input type="hidden" name="_csrf" value="${_csrf.token}"/>
             <input type="text" name="artist" placeholder="Enter artist">

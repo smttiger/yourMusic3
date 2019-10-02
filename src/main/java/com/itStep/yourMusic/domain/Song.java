@@ -1,9 +1,6 @@
 package com.itStep.yourMusic.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Song {
@@ -13,6 +10,10 @@ public class Song {
     private String artist;
     private String name;
     private String filename;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="playlist_id")
+    private Playlist playlist;
 
     public Song(String artist, String name) {
         this.artist = artist;

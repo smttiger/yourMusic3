@@ -21,9 +21,11 @@
             <li class="nav-item">
                 <a class="nav-link" href="/upload">Upload</a>
             </li>
-<#--            <li class="nav-item">-->
-<#--                <a class="nav-link" href="/user-playlists/${currentUserId}">My playlists</a>-->
-<#--            </li>-->
+            <#if known>
+            <li class="nav-item">
+                <a class="nav-link" href="/playlists/${currentUserId}">My playlists</a>
+            </li>
+            </#if>
         </ul>
         <span class="navbar-text mr-3">${name}</span>
         <#if known>
