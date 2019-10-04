@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
 import java.util.Set;
 
 @Controller
@@ -23,6 +24,7 @@ public class PlaylistController {
 
     @Autowired
     private SongRepo songRepo;
+
     @GetMapping("/playlists/{user}")
     public String userPlaylists(
 
@@ -53,24 +55,32 @@ public class PlaylistController {
 
     @GetMapping("/playlists/{user}/{id}")
     public String playlistSongs(
-            @PathVariable(name="id") Integer id,
+            @PathVariable(name = "id") int id,
             Model model
     ) {
-        Playlist playlist= (Playlist) playlistRepo.findById(id);
+        Playlist playlist =  playlistRepo.findById(id);
         Set<Song> plSongs = playlist.getPlaylistSongs();
         model.addAttribute("playlistSongs", plSongs);
-        Iterable<Song> allSongs=songRepo.findAll();
-        model.addAttribute("allSongs", allSongs);
+        model.addAttribute("playlistName",playlist.getName());
         return "plSongs";
     }
 
-//    @PostMapping("add to playlist")
-//    public String addToPlaylist(
-//            @AuthenticationPrincipal User user,
-//            @RequestParam String plName,
-//            Model model,
-//
-//    )
+    @PostMapping("/playlists/{UserId}/{playlistId}/add")
+    public String addSongToPlaylist(
+            @PathVariable(name = "playlistId") int id,
+            @RequestParam String name,
+            Model model
+    ) {
+        Playlist playlist =  playlistRepo.findById(id);
+        Set<Song> plSongs = playlist.getPlaylistSongs();
+        List<Song> song = songRepo.findByName(name);
+        plSongs.addAll(song);
+        playlist.setPlaylistSongs(plSongs);
+        playlistRepo.save(playlist);
+        model.addAttribute("playlistSongs", plSongs);
+        return "plsongs";
+    }
+
 }
 
 

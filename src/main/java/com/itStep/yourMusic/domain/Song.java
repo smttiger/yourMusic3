@@ -1,6 +1,9 @@
 package com.itStep.yourMusic.domain;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Objects;
+import java.util.Set;
 
 @Entity
 public class Song {
@@ -11,13 +14,24 @@ public class Song {
     private String name;
     private String filename;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name="playlist_id")
-    private Playlist playlist;
+
+
+    @ManyToMany
+    @JoinTable(name="playlist_song",
+    joinColumns = @JoinColumn(name="song_id"),
+    inverseJoinColumns = @JoinColumn(name="playlist_id"))
+    private Set<Playlist> songPlaylists=new HashSet<>();
 
     public Song(String artist, String name) {
         this.artist = artist;
         this.name = name;
+    }
+    public Set<Playlist> getSongPlaylists() {
+        return songPlaylists;
+    }
+
+    public void setSongPlaylists(Set<Playlist> songPlaylists) {
+        this.songPlaylists = songPlaylists;
     }
 
     public Song(){}
@@ -52,5 +66,18 @@ public class Song {
 
     public void setFilename(String filename) {
         this.filename = filename;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Song song = (Song) o;
+        return id.equals(song.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }
