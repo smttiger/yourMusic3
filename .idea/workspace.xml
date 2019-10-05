@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1bdbf51d-be67-41f7-8cc0-306cc09c1210" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/search.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/controller/PlaylistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/controller/PlaylistController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/domain/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/domain/Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/domain/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/domain/Song.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/repository/PlaylistRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/repository/PlaylistRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/repository/SongRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/repository/SongRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/plSongs.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/plSongs.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/playlists.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/playlists.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/search results.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/search results.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/domain/Song.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/domain/Song.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/main.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/search results.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/search results.ftl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -195,7 +187,8 @@
       <workItem from="1570018000556" duration="24490000" />
       <workItem from="1570086488531" duration="20834000" />
       <workItem from="1570133570367" duration="207000" />
-      <workItem from="1570195879564" duration="7501000" />
+      <workItem from="1570195879564" duration="7697000" />
+      <workItem from="1570273892446" duration="10926000" />
     </task>
     <task id="LOCAL-00001" summary="freemarker was added">
       <created>1569271303232</created>
@@ -246,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570051708816</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="adding songs to playlist  was added">
+      <created>1570205634604</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1570205634604</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,6 +273,7 @@
     <MESSAGE value="upload was added" />
     <MESSAGE value="upload report was added" />
     <MESSAGE value="playlist creation was added" />
-    <option name="LAST_COMMIT_MESSAGE" value="playlist creation was added" />
+    <MESSAGE value="adding songs to playlist  was added" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding songs to playlist  was added" />
   </component>
 </project>

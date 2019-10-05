@@ -8,4 +8,5 @@ import java.util.List;
 public interface SongRepo extends CrudRepository<Song,Long> {
     List<Song> findByArtist(String artist);
     List<Song> findByName(String name);
+    Song findById(int id);
 }

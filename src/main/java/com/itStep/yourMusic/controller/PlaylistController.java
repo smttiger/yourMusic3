@@ -61,25 +61,91 @@ public class PlaylistController {
         Playlist playlist =  playlistRepo.findById(id);
         Set<Song> plSongs = playlist.getPlaylistSongs();
         model.addAttribute("playlistSongs", plSongs);
-        model.addAttribute("playlistName",playlist.getName());
+        model.addAttribute("playlist",playlist);
         return "plSongs";
     }
 
-    @PostMapping("/playlists/{UserId}/{playlistId}/add")
-    public String addSongToPlaylist(
+
+    @PostMapping("/playlists/{user}/{playlistId}/delete")
+    public String deletePlaylist(
+            @PathVariable User user ,
             @PathVariable(name = "playlistId") int id,
-            @RequestParam String name,
+            Model model
+    ) {
+        Playlist playlist =  playlistRepo.findById(id);
+        Set<Playlist> userPlaylists = user.getPlaylists();
+        userPlaylists.remove(playlist);
+        playlistRepo.delete(playlist);
+        user.setPlaylists(userPlaylists);
+        model.addAttribute("playlists", userPlaylists);
+        return "playlists";
+    }
+    @PostMapping("/playlists/{UserId}/{playlistId}/{songId}/delete")
+    public String deleteSongFromPlaylist(
+            @PathVariable(name = "playlistId") int id,
+            @PathVariable(name = "songId") int songId,
             Model model
     ) {
         Playlist playlist =  playlistRepo.findById(id);
         Set<Song> plSongs = playlist.getPlaylistSongs();
-        List<Song> song = songRepo.findByName(name);
-        plSongs.addAll(song);
+        Song song = songRepo.findById(songId);
+            plSongs.remove(song);
+            playlist.setPlaylistSongs(plSongs);
+            playlistRepo.save(playlist);
+        model.addAttribute("playlistSongs", plSongs);
+        model.addAttribute("playlist", playlist);
+        return "plsongs";
+    }
+
+    @PostMapping("/playlists/{user}/{playlistId}/search")
+    public String search(@RequestParam String artist,
+                         @PathVariable(name = "playlistId") int id,
+                         Model model) {
+        Iterable<Song> songs;
+        Playlist playlist =  playlistRepo.findById(id);
+        if (artist != null && !artist.isEmpty()) {
+            songs = songRepo.findByArtist(artist);
+        } else songs = songRepo.findAll();
+        model.addAttribute("songs", songs);
+        model.addAttribute("playlist", playlist);
+        Set<Song> plSongs = playlist.getPlaylistSongs();
+        model.addAttribute("playlistSongs", plSongs);
+        return "plSongs";
+    }
+
+    @PostMapping("/playlists/{user}/{playlistId}/searchByName")
+    public String searchByName(@RequestParam String name,
+                               Model model,
+                               @PathVariable(name = "playlistId") int id ) {
+        Playlist playlist =  playlistRepo.findById(id);
+        Iterable<Song> songs;
+        if (name != null && !name.isEmpty()) {
+            songs = songRepo.findByName(name);
+        } else songs = songRepo.findAll();
+        model.addAttribute("songs", songs);
+        model.addAttribute("playlist", playlist);
+        Set<Song> plSongs = playlist.getPlaylistSongs();
+        model.addAttribute("playlistSongs", plSongs);
+        return "plSongs";
+    }
+
+    @PostMapping("/playlists/{UserId}/{playlistId}/{songId}/add")
+    public String addSongToPlaylist(
+            @PathVariable(name = "playlistId") int id,
+            @PathVariable(name = "songId") int songId,
+            Model model
+    ) {
+        Playlist playlist =  playlistRepo.findById(id);
+        Set<Song> plSongs = playlist.getPlaylistSongs();
+        Song song = songRepo.findById(songId);
+        plSongs.add(song);
         playlist.setPlaylistSongs(plSongs);
         playlistRepo.save(playlist);
         model.addAttribute("playlistSongs", plSongs);
-        return "plsongs";
+        model.addAttribute("playlist", playlist);
+        return "plSongs";
     }
+
 
 }
 

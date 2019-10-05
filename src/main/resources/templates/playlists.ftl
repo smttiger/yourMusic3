@@ -18,12 +18,9 @@
     <#list playlists as playlist>
         <div>
             <b><a class="nav-link" href="/playlists/${currentUserId}/${playlist.id}">${playlist.name}</a></b>
-            <form method="post" action="/playlists/${currentUserId}/${playlist.id}/add" >
+            <form method="post" action="/playlists/${currentUserId}/${playlist.id}/delete" >
                 <input type="hidden" name="_csrf" value="${_csrf.token}"/>
-<#--                <div class="form-group row">-->
-                    <input type="text" name="name" placeholder="Enter name of song">
-                    <button type="submit" class="btn btn-success ml-1">Add</button>
-<#--                </div>-->
+                <button type="submit" class="btn btn-danger ml-1">Delete</button>
             </form>
         </div>
         <br>
