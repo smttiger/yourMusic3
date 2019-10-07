@@ -1,6 +1,6 @@
 <br>
 <br>
-<form method="post" action="search" >
+<form method="get" action="search" >
     <input type="hidden" name="_csrf" value="${_csrf.token}"/>
     <div class="form-group row">
         <input type="text" name="artist" placeholder="Enter artist">
@@ -8,7 +8,7 @@
     </div>
 </form>
 
-<form method="post" action="searchByName" >
+<form method="get" action="searchByName" >
     <input type="hidden" name="_csrf" value="${_csrf.token}"/>
     <div class="form-group row">
         <input type="text" name="name" placeholder="Enter name of the song">

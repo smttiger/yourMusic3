@@ -4,10 +4,20 @@
 
     <br>
     <br>
-    <h3>${playlist.name}</h3>
+    <div class="form-row">
+        <div class=" col-auto">
+            <h3>${playlist.name}</h3>
+        </div>
+        <div class="col-auto">
+            <form method="get" action="/playlists/${currentUserId}/${playlist.id}/Listen">
+                <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+                <button type="submit" class="btn btn-success ml-1">Listen</button>
+            </form>
+        </div>
+    </div>
     <br>
 
-    <form method="post" action="/playlists/${currentUserId}/${playlist.id}/search" >
+    <form method="get" action="/playlists/${currentUserId}/${playlist.id}/search">
         <input type="hidden" name="_csrf" value="${_csrf.token}"/>
         <div class="form-group row">
             <input type="text" name="artist" placeholder="Enter artist">
@@ -15,7 +25,7 @@
         </div>
     </form>
 
-    <form method="post" action="/playlists/${currentUserId}/${playlist.id}/searchByName" >
+    <form method="get" action="/playlists/${currentUserId}/${playlist.id}/searchByName">
         <input type="hidden" name="_csrf" value="${_csrf.token}"/>
         <div class="form-group row">
             <input type="text" name="name" placeholder="Enter name of the song">
@@ -24,34 +34,51 @@
     </form>
     <br>
     <#if songs??>
-    <#list songs as song>
-        <div>
-            <b>${song.artist}    </b>
-            <i>${song.name}    </i>
-            <audio src="/aud/${song.filename}" controls></audio>
-                <form method="post" action="/playlists/${currentUserId}/${playlist.id}/${song.id}/add" >
-                    <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+        <#list songs as song>
+            <div class="form-row">
+                <div class=" col-auto">
+                    <b>${song.artist}    </b>
+                </div>
+                <div class="col-auto">
+                    <i>${song.name}    </i>
+                </div>
+                <div class="col-auto">
+                    <audio src="/aud/${song.filename}" controls></audio>
+                </div>
+                <div class="col-auto">
+                    <form method="post" action="/playlists/${currentUserId}/${playlist.id}/${song.id}/add">
+                        <input type="hidden" name="_csrf" value="${_csrf.token}"/>
                         <button type="submit" class="btn btn-success ml-1">Add</button>
-                </form>
-        </div>
-    <#else>
-        <h3> Song was not found</h3>
-    </#list>
+                    </form>
+                </div>
+            </div>
+            <br>
+        <#else>
+            <h3> Song was not found</h3>
+        </#list>
     </#if>
     <br>
     <#list playlistSongs as song>
-        <div >
-            <b>${song.artist}    </b>
-            <i>${song.name}    </i>
-            <audio src="/aud/${song.filename}" controls ></audio>
-            <form method="post" action="/playlists/${currentUserId}/${playlist.id}/${song.id}/delete" >
-                <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+        <div class="form-row">
+            <div class=" col-auto">
+                <b>${song.artist}    </b>
+            </div>
+            <div class=" col-auto">
+                <i>${song.name}    </i>
+            </div>
+            <div class=" col-auto">
+                <audio src="/aud/${song.filename}" controls></audio>
+            </div>
+            <div class=" col-auto">
+                <form method="post" action="/playlists/${currentUserId}/${playlist.id}/${song.id}/delete">
+                    <input type="hidden" name="_csrf" value="${_csrf.token}"/>
                     <button type="submit" class="btn btn-danger ml-1">Delete</button>
-            </form>
+                </form>
+            </div>
         </div>
         <br>
     <#else>
         <h3> You have no songs in this playlist</h3>
     </#list>
-<#if addReport??><h5>${addReport}</h5></#if>
+    <#if addReport??><h5>${addReport}</h5></#if>
 </@c.page>

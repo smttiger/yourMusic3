@@ -3,7 +3,7 @@
 <@c.page>
     <br>
     <br>
-    <form method="post" action="/playlists/${currentUserId}" >
+    <form method="post" action="/playlists/${currentUserId}">
         <input type="hidden" name="_csrf" value="${_csrf.token}"/>
         <div class="form-group row">
             <input type="text" name="playlistName" placeholder="Enter name of playlist">
@@ -16,16 +16,27 @@
     <br>
     <br>
     <#list playlists as playlist>
-        <div>
-            <b><a class="nav-link" href="/playlists/${currentUserId}/${playlist.id}">${playlist.name}</a></b>
-            <form method="post" action="/playlists/${currentUserId}/${playlist.id}/delete" >
-                <input type="hidden" name="_csrf" value="${_csrf.token}"/>
-                <button type="submit" class="btn btn-danger ml-1">Delete</button>
-            </form>
+        <div class="form-row">
+            <div class="col-auto">
+                <h5><b><a class="alert-link" href="/playlists/${currentUserId}/${playlist.id}">${playlist.name}</a></b></h5>
+            </div>
+            <div class="col-auto">
+                <form method="post" action="/playlists/${currentUserId}/${playlist.id}/delete">
+                    <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+                    <button type="submit" class="btn btn-danger ml-1">Delete</button>
+                </form>
+            </div>
+            <div class="col-auto">
+                <form method="get" action="/playlists/${currentUserId}/${playlist.id}/Listen">
+                    <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+                    <button type="submit" class="btn btn-success ml-1">Listen</button>
+                </form>
+            </div>
         </div>
+        <br>
         <br>
     <#else>
         <h5> You have no playlists</h5>
     </#list>
 
-    </@c.page>
+</@c.page>

@@ -42,7 +42,8 @@ public class SongController {
     public String add(
 
             @RequestParam String artist,
-            @RequestParam String name, Model model,
+            @RequestParam String name,
+            Model model,
             @RequestParam("file") MultipartFile file)  {
 
         Song song = new Song(artist, name);
@@ -67,23 +68,24 @@ public class SongController {
         return "upload";
     }
 
-    @PostMapping("search")
+    @GetMapping("search")
     public String search(@RequestParam String artist, Model model) {
-        Iterable<Song> songs;
+      Iterable<Song> songs;
         if (artist != null && !artist.isEmpty()) {
             songs = songRepo.findByArtist(artist);
-        } else songs = songRepo.findAll();
+        } else songs =songRepo.findAll();
         model.addAttribute("songs", songs);
-        return "search results";
+        return "player";
     }
 
-    @PostMapping("searchByName")
+    @GetMapping("searchByName")
     public String searchByName(@RequestParam String name, Model model) {
         Iterable<Song> songs;
         if (name != null && !name.isEmpty()) {
             songs = songRepo.findByName(name);
         } else songs = songRepo.findAll();
         model.addAttribute("songs", songs);
-        return "search results";
+        return "player";
     }
+
 }
