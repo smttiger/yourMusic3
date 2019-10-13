@@ -127,17 +127,20 @@ public class PlaylistController {
         Set<Song> plSongs = playlist.getPlaylistSongs();
         model.addAttribute("playlistSongs", plSongs);
         return "plSongs";
+
     }
+
     @GetMapping("/playlists/{user}/{playlistId}/Listen")
     public String listenToPlaylist(
-                               Model model,
-                               @PathVariable(name = "playlistId") int id) {
+            Model model,
+            @PathVariable(name = "playlistId") int id) {
         Playlist playlist = playlistRepo.findById(id);
         Iterable<Song> songs;
         Set<Song> plSongs = playlist.getPlaylistSongs();
         model.addAttribute("songs", plSongs);
         return "player";
     }
+
     @PostMapping("/playlists/{UserId}/{playlistId}/{songId}/add")
     public String addSongToPlaylist(
             @PathVariable(name = "playlistId") int id,

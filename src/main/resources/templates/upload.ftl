@@ -1,7 +1,7 @@
 <#import "parts/common.ftl" as c>
 <@c.page>
-    <br>
-    <br>
+
+    <div class="container mt-5">
     <h3>Upload your favourite song and everybody will enjoy it!</h3>
     <br>
         <form method="post" enctype="multipart/form-data" action="upload" >
@@ -16,5 +16,5 @@
     <#if uploadReport??>
         <h5>${uploadReport}</h5>
     </#if>
-
+</div>
 </@c.page>

@@ -26,6 +26,11 @@
                 <a class="nav-link" href="/playlists/${currentUserId}">My playlists</a>
             </li>
             </#if>
+            <#if isAdmin>
+            <li class="nav-item">
+                <a class="nav-link" href="/user">User list</a>
+            </li>
+            </#if>
         </ul>
         <span class="navbar-text mr-3">${name}</span>
         <#if known>

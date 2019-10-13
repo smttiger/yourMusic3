@@ -6,10 +6,12 @@ known=Session.SPRING_SECURITY_CONTEXT??
     user=Session.SPRING_SECURITY_CONTEXT.authentication.principal
     name=user.getUsername()
     currentUserId=user.getId()
+    isAdmin=user.isAdmin()
     >
 <#else>
     <#assign
     name="guest"
     currentUserId=-1
+    isAdmin=false
     >
 </#if>

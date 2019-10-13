@@ -1,5 +1,5 @@
-<br>
-<br>
+
+<div class="container mt-5">
 <form method="get" action="search" >
     <input type="hidden" name="_csrf" value="${_csrf.token}"/>
     <div class="form-group row">
@@ -15,3 +15,4 @@
         <button type="submit" class="btn btn-primary ml-1">Search by name</button>
     </div>
 </form>
+    </div>

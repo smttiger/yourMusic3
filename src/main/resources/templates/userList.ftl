@@ -1,11 +1,14 @@
 <#import "parts/common.ftl" as c>
 
 <@c.page>
-    <table>
-        <thead>
+    <div class="container mt-5">
+    <table class="table table-hover">
+        <thead class="thead-inverse">
         <tr>
             <th>Name</th>
             <th>Role</th>
+            <th>Action</th>
+            <th>Action</th>
         </tr>
         </thead>
         <tbody>
@@ -29,4 +32,5 @@
         </#list>
         </tbody>
     </table>
+    </div>
 </@c.page>

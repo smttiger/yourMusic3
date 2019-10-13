@@ -2,8 +2,8 @@
 <#include "parts/security.ftl">
 <@c.page>
 
-    <br>
-    <br>
+
+    <div class="container mt-5">
     <div class="form-row">
         <div class=" col-auto">
             <h3>${playlist.name}</h3>
@@ -15,8 +15,9 @@
             </form>
         </div>
     </div>
-    <br>
+    </div>
 
+    <div class="container mt-5">
     <form method="get" action="/playlists/${currentUserId}/${playlist.id}/search">
         <input type="hidden" name="_csrf" value="${_csrf.token}"/>
         <div class="form-group row">
@@ -32,6 +33,7 @@
             <button type="submit" class="btn btn-primary ml-1">Search by name</button>
         </div>
     </form>
+    </div>
     <br>
     <#if songs??>
         <#list songs as song>

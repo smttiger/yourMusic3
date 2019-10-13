@@ -1,8 +1,8 @@
 <#import "parts/common.ftl" as c>
 <#include "parts/security.ftl">
 <@c.page>
-    <br>
-    <br>
+
+    <div class="container mt-5">
     <form method="post" action="/playlists/${currentUserId}">
         <input type="hidden" name="_csrf" value="${_csrf.token}"/>
         <div class="form-group row">
@@ -10,12 +10,14 @@
             <button type="submit" class="btn btn-success ml-1">Create</button>
         </div>
     </form>
-    <br>
-    <br>
+    </div>
+
+    <div class="container mt-5">
     <h3>List of your playlists</h3>
-    <br>
-    <br>
+    </div>
+
     <#list playlists as playlist>
+        <div class="container mt-5">
         <div class="form-row">
             <div class="col-auto">
                 <h5><b><a class="alert-link" href="/playlists/${currentUserId}/${playlist.id}">${playlist.name}</a></b></h5>
@@ -33,10 +35,12 @@
                 </form>
             </div>
         </div>
-        <br>
-        <br>
+        </div>
+
     <#else>
+        <div class="container mt-5">
         <h5> You have no playlists</h5>
+        </div>
     </#list>
 
 </@c.page>

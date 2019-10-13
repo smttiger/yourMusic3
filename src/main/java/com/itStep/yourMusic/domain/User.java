@@ -40,6 +40,10 @@ public class User implements UserDetails {
         this.playlists = playlists;
     }
 
+    public boolean isAdmin(){
+        return roles.contains(Role.ADMIN);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
