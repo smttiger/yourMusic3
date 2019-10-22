@@ -3,9 +3,8 @@
 
 <@c.page>
     <div class="container mt-5">Please, login</div>
-    <br>
-    <br>
-    <br>
-    <@l.login "/login" false />
 
+    <div class="container mt-5">
+    <@l.login "/login" false />
+    </div>
 </@c.page>

@@ -1,10 +1,11 @@
 <#import "parts/common.ftl" as c>
 <@c.page>
-    <br>
-    <br>
+
+    <div class="container mt-5">
     <h3>List of found songs</h3>
-    <br>
-    <br>
+    </div>
+
+    <div class="container mt-5">
             <#list songs as song>
             <p>
             <b>${song.artist}    </b>
@@ -15,5 +16,5 @@
             <h3> Song was not found</h3>
         </#list>
         <br>
-
+</div>
 </@c.page>
