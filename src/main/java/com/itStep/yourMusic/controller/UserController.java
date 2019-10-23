@@ -3,6 +3,7 @@ package com.itStep.yourMusic.controller;
 import com.itStep.yourMusic.domain.Role;
 import com.itStep.yourMusic.domain.User;
 import com.itStep.yourMusic.repository.UserRepo;
+import com.itStep.yourMusic.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
@@ -18,12 +19,15 @@ import java.util.stream.Collectors;
 @RequestMapping("/user")
 @PreAuthorize("hasAuthority('ADMIN')")
 public class UserController {
+//    @Autowired
+//    private UserRepo userRepo;
+
     @Autowired
-    private UserRepo userRepo;
+    private UserService userService;
 
     @GetMapping
     public String userList(Model model) {
-        model.addAttribute("users", userRepo.findAll());
+        model.addAttribute("users", userService.findAllUsers());
         return "userList";
     }
 
@@ -43,15 +47,16 @@ public class UserController {
             @RequestParam("userId") User user,
             @RequestParam Map<String, String> form
     ) {
-        Set<String> roles = Arrays.stream(Role.values()).
-                map(Role::name).collect(Collectors.toSet());
-        user.getRoles().clear();
-        for (String key : form.keySet()) {
-            if (roles.contains(key)) {
-                user.getRoles().add(Role.valueOf(key));
-            }
-        }
-        userRepo.save(user);
+//        Set<String> roles = Arrays.stream(Role.values()).
+//                map(Role::name).collect(Collectors.toSet());
+//        user.getRoles().clear();
+//        for (String key : form.keySet()) {
+//            if (roles.contains(key)) {
+//                user.getRoles().add(Role.valueOf(key));
+//            }
+//        }
+//        userRepo.save(user);
+        userService.saveUsersRoles(user,form);
         return ("redirect:/user");
     }
     @PostMapping("/{user}/Delete")
@@ -59,7 +64,8 @@ public class UserController {
             @PathVariable User user
 
     ) {
-        userRepo.delete(user);
+        //userRepo.delete(user);
+        userService.deleteUser(user);
         return ("redirect:/user");
     }
 }

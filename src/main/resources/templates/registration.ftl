@@ -5,5 +5,5 @@
    <div class="mb-3">Create a new account</div>
 <@l.login "/registration" true />
     <br>
-    ${message?ifExists}
+    <h3>${message?ifExists}</h3>
 </@c.page>

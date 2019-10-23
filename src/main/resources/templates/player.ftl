@@ -81,7 +81,7 @@
 <script type="text/javascript">
     "use strict";
     var arr = [];
-    <#list songs as song>
+    <#list playlistSongs as song>
     var obj = {
                 "title": "${song.name}",
                 "author": "${song.artist}",
