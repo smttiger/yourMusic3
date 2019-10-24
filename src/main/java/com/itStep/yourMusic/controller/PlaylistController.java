@@ -1,10 +1,6 @@
 package com.itStep.yourMusic.controller;
 
-import com.itStep.yourMusic.domain.Playlist;
-import com.itStep.yourMusic.domain.Song;
 import com.itStep.yourMusic.domain.User;
-import com.itStep.yourMusic.repository.PlaylistRepo;
-import com.itStep.yourMusic.repository.SongRepo;
 import com.itStep.yourMusic.service.PlaylistService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -15,15 +11,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.Set;
-
 @Controller
 public class PlaylistController {
-    @Autowired
-    private PlaylistRepo playlistRepo;
 
-    @Autowired
-    private SongRepo songRepo;
 
     @Autowired
     private PlaylistService playlistService;
@@ -34,7 +24,7 @@ public class PlaylistController {
             @PathVariable User user,
             Model model
     ) {
-        //Set<Playlist> playlists = user.getPlaylists();
+
         model.addAttribute("playlists", user.getPlaylists());
         return "playlists";
     }
@@ -47,12 +37,9 @@ public class PlaylistController {
             @AuthenticationPrincipal User currentUser
     ) {
 
-//        Playlist playlist = new Playlist(playlistName, currentUser);
-//        Set<Playlist> userPlaylists = user.getPlaylists();
-//        userPlaylists.add(playlist);
-//        playlistRepo.save(playlist);
-//        user.setPlaylists(userPlaylists);
-        model.addAttribute("playlists", playlistService.listOfPlaylists(user,playlistName,currentUser));
+
+        model.addAttribute("playlists", playlistService.createPlaylist(user,playlistName,currentUser));
+
         return "playlists";
     }
 
@@ -61,10 +48,7 @@ public class PlaylistController {
             @PathVariable(name = "id") int id,
             Model model
     ) {
-//        Playlist playlist = playlistRepo.findById(id);
-//        Set<Song> plSongs = playlist.getPlaylistSongs();
-//        model.addAttribute("playlistSongs", plSongs);
-//        model.addAttribute("playlist", playlist);
+
         playlistService.showSongs(id, model);
         return "plSongs";
     }
@@ -76,11 +60,7 @@ public class PlaylistController {
             @PathVariable(name = "playlistId") int id,
             Model model
     ) {
-//        Playlist playlist = playlistRepo.findById(id);
-//        Set<Playlist> userPlaylists = user.getPlaylists();
-//        userPlaylists.remove(playlist);
-//        playlistRepo.delete(playlist);
-//        user.setPlaylists(userPlaylists);
+
         model.addAttribute("playlists", playlistService.deletePlaylist(user,id));
         return "playlists";
     }
@@ -91,14 +71,7 @@ public class PlaylistController {
             @PathVariable(name = "songId") int songId,
             Model model
     ) {
-//        Playlist playlist = playlistRepo.findById(id);
-//        Set<Song> plSongs = playlist.getPlaylistSongs();
-//        Song song = songRepo.findById(songId);
-//        plSongs.remove(song);
-//        playlist.setPlaylistSongs(plSongs);
-//        playlistRepo.save(playlist);
-//        model.addAttribute("playlistSongs", plSongs);
-//        model.addAttribute("playlist", playlist);
+
         playlistService.deleteSongFromPlaylist(id,songId,model);
         return "plsongs";
     }
@@ -107,64 +80,31 @@ public class PlaylistController {
     public String search(@RequestParam String artist,
                          @PathVariable(name = "playlistId") int id,
                          Model model) {
-//        Iterable<Song> songs;
-//        Playlist playlist = playlistRepo.findById(id);
-//        if (artist != null && !artist.isEmpty()) {
-//            songs = songRepo.findByArtist(artist);
-//        } else songs = songRepo.findAll();
-//        model.addAttribute("songs", songs);
-//        model.addAttribute("playlist", playlist);
-//        Set<Song> plSongs = playlist.getPlaylistSongs();
-//        model.addAttribute("playlistSongs", plSongs);
+
         playlistService.searchByArtist(artist,id,model);
         return "plSongs";
     }
 
-    @GetMapping("/playlists/{user}/{playlistId}/searchByName")
-    public String searchByName(@RequestParam String name,
-                               Model model,
-                               @PathVariable(name = "playlistId") int id) {
-//        Playlist playlist = playlistRepo.findById(id);
-//        Iterable<Song> songs;
-//        if (name != null && !name.isEmpty()) {
-//            songs = songRepo.findByName(name);
-//        } else songs = songRepo.findAll();
-//        model.addAttribute("songs", songs);
-//        model.addAttribute("playlist", playlist);
-//        Set<Song> plSongs = playlist.getPlaylistSongs();
-//        model.addAttribute("playlistSongs", plSongs);
-        playlistService.searchByName(name,model,id);
-        return "plSongs";
-
-    }
 
     @GetMapping("/playlists/{user}/{playlistId}/Listen")
     public String listenToPlaylist(
             Model model,
             @PathVariable(name = "playlistId") int id) {
-//        Playlist playlist = playlistRepo.findById(id);
-//        Iterable<Song> songs;
-//        Set<Song> plSongs = playlist.getPlaylistSongs();
-//        model.addAttribute("songs", plSongs);
+
         playlistService.showSongs(id, model);
         return "player";
     }
 
     @PostMapping("/playlists/{UserId}/{playlistId}/{songId}/add")
     public String addSongToPlaylist(
+            @RequestParam String artist,
             @PathVariable(name = "playlistId") int id,
             @PathVariable(name = "songId") int songId,
             Model model
     ) {
-//        Playlist playlist = playlistRepo.findById(id);
-//        Set<Song> plSongs = playlist.getPlaylistSongs();
-//        Song song = songRepo.findById(songId);
-//        plSongs.add(song);
-//        playlist.setPlaylistSongs(plSongs);
-//        playlistRepo.save(playlist);
-//        model.addAttribute("playlistSongs", plSongs);
-//        model.addAttribute("playlist", playlist);
+
         playlistService.addSongToPlaylist(id,songId,model);
+            playlistService.searchByArtist(artist,id,model);
         return "plSongs";
     }
 

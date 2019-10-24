@@ -16,7 +16,7 @@ public class Playlist {
         @JoinColumn(name="user_id")
         private User author;
 
-    @ManyToMany(cascade=CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToMany
     @JoinTable(name="playlist_song",
     joinColumns=@JoinColumn(name="playlist_id"),
     inverseJoinColumns = @JoinColumn(name="song_id"))

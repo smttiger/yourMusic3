@@ -26,13 +26,13 @@
             </div>
         </form>
 
-        <form method="get" action="/playlists/${currentUserId}/${playlist.id}/searchByName">
-            <input type="hidden" name="_csrf" value="${_csrf.token}"/>
-            <div class="form-group row">
-                <input type="text" name="name" placeholder="Enter name of the song" size="50">
-                <button type="submit" class="btn btn-primary ml-1">Search by name</button>
-            </div>
-        </form>
+<#--        <form method="get" action="/playlists/${currentUserId}/${playlist.id}/searchByName">-->
+<#--            <input type="hidden" name="_csrf" value="${_csrf.token}"/>-->
+<#--            <div class="form-group row">-->
+<#--                <input type="text" name="name" placeholder="Enter name of the song" size="50">-->
+<#--                <button type="submit" class="btn btn-primary ml-1">Search by name</button>-->
+<#--            </div>-->
+<#--        </form>-->
     </div>
 
     <#if songs??>
@@ -57,6 +57,8 @@
                         <td>
                             <form method="post" action="/playlists/${currentUserId}/${playlist.id}/${song.id}/add">
                                 <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+                                <#if artist??><input type="hidden" name="artist" value="${artist}"/></#if>
+<#--                                <#if name??><input type="hidden" name="name" value="${name}"/></#if>-->
                                 <button type="submit" class="btn btn-success ml-1">Add</button>
                             </form>
                         </td>
