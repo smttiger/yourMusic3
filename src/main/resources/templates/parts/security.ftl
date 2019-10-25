@@ -13,5 +13,6 @@ known=Session.SPRING_SECURITY_CONTEXT??
     name="guest"
     currentUserId=-1
     isAdmin=false
+
     >
 </#if>
