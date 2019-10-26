@@ -2,9 +2,14 @@
 <#import "parts/login.ftl" as l>
 
 <@c.page>
-    <h3>${message?ifExists}</h3>
-    <div class="container mt-5">Please, login</div>
-
+    <#if message??>
+        <div class="container mt-5">
+    <div class="alert alert-primary" role="alert">
+        <h3>${message}</h3>
+    </div>
+        </div>
+    </#if>
+    <div class="container mt-5"><h4>Please, login</h4></div>
     <div class="container mt-5">
     <@l.login "/login" false />
     </div>

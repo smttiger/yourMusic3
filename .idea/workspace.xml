@@ -2,26 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1bdbf51d-be67-41f7-8cc0-306cc09c1210" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/Config/MailConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/service/MailSenderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audio/621b5ffd-3e44-40f6-a413-1567612ad09fAvril Lavigne - Mobile.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/mailReport.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/Config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/Config/WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/controller/RegistrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/repository/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/repository/UserRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/login.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/security.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/security.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/Config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/Config/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/controller/RegistrationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/controller/RegistrationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/domain/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/repository/UserRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/repository/UserRepo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/login.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/registration.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/registration.ftl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,8 +68,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -227,7 +219,9 @@
       <workItem from="1571850526608" duration="4482000" />
       <workItem from="1571856047755" duration="324000" />
       <workItem from="1571906652120" duration="25608000" />
-      <workItem from="1572000560085" duration="8897000" />
+      <workItem from="1572000560085" duration="9334000" />
+      <workItem from="1572018298599" duration="642000" />
+      <workItem from="1572100592809" duration="8528000" />
     </task>
     <task id="LOCAL-00001" summary="freemarker was added">
       <created>1569271303232</created>
@@ -334,7 +328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571930165570</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="mail sender  was added">
+      <created>1572010538665</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1572010538665</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,6 +369,7 @@
     <MESSAGE value="tables to playlists  were added" />
     <MESSAGE value="service  was added" />
     <MESSAGE value="correct adding songs to playlist  was added" />
-    <option name="LAST_COMMIT_MESSAGE" value="correct adding songs to playlist  was added" />
+    <MESSAGE value="mail sender  was added" />
+    <option name="LAST_COMMIT_MESSAGE" value="mail sender  was added" />
   </component>
 </project>

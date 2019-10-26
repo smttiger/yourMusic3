@@ -22,10 +22,7 @@ public class RegistrationController {
     }
 
     @GetMapping("/registration")
-    public String registration(Model model) {
-
-        model.addAttribute("message","Important! After registration check your email " +
-                "and follow activation link to be able to use Your music" );
+    public String registration() {
         return "registration";
     }
 
@@ -37,8 +34,8 @@ public class RegistrationController {
             model.addAttribute("message", "User with such username is already exists!");
             return "registration";
         }
-        userService.saveNewUser(user);
-        return ("redirect:/login");
+        userService.saveNewUser(user,model);
+        return ("mailReport");
     }
 
     @GetMapping("/activate/{code}")
