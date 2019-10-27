@@ -31,6 +31,11 @@
                 <a class="nav-link" href="/user">User list</a>
             </li>
             </#if>
+            <#if user??>
+                <li class="nav-item">
+                    <a class="nav-link" href="/user/profile">My profile</a>
+                </li>
+            </#if>
         </ul>
         <span class="navbar-text mr-3">${name}</span>
         <#if known>

@@ -4,5 +4,5 @@
     <br>
 <h1>Welcome to Your Music!</h1>
     <br>
-<div>Enjoy listening every day...</div>
+<div><h3>Enjoy listening every day...</h3></div>
 </@c.page>
