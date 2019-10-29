@@ -8,6 +8,7 @@ import com.itStep.yourMusic.repository.SongRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
 
 import java.util.Set;
 
@@ -22,16 +23,17 @@ public class PlaylistService {
     @Autowired
     SongService songService;
 
-    public Set<Playlist> createPlaylist(User user,String playlistName,
-             User currentUser)
-     {
+    public void createPlaylist(User user, String playlistName,
+                               User currentUser, Model model) {
         Playlist playlist = new Playlist(playlistName, currentUser);
-        Set<Playlist> userPlaylists = user.getPlaylists();
-        userPlaylists.add(playlist);
-        playlistRepo.save(playlist);
-        user.setPlaylists(userPlaylists);
-        return userPlaylists;
+        if (StringUtils.isEmpty(playlistName)) {
+            model.addAttribute("nameError", "Please, enter name of playlist");
+        } else {
+            playlistRepo.save(playlist);
+        }
+        model.addAttribute("playlists", user.getPlaylists());
     }
+
 
     public void showSongs(int id, Model model) {
         Playlist playlist = playlistRepo.findById(id);
@@ -41,15 +43,11 @@ public class PlaylistService {
 
     public Set<Playlist> deletePlaylist(User user, int id) {
         Playlist playlist = playlistRepo.findById(id);
-        //Set<Playlist> userPlaylists = user.getPlaylists();
-        //userPlaylists.remove(playlist);
         playlistRepo.delete(playlist);
-        //user.setPlaylists(userPlaylists);
-        //return userPlaylists;
         return user.getPlaylists();
     }
-    public void deleteSongFromPlaylist( int id, int songId, Model model)
-     {
+
+    public void deleteSongFromPlaylist(int id, int songId, Model model) {
         Playlist playlist = playlistRepo.findById(id);
         Set<Song> plSongs = playlist.getPlaylistSongs();
         Song song = songRepo.findById(songId);
@@ -60,13 +58,13 @@ public class PlaylistService {
         model.addAttribute("playlist", playlist);
     }
 
-    public void searchByArtist( String artist, int id, Model model) {
+    public void searchByArtist(String artist, int id, Model model) {
         model.addAttribute("songs", songService.searchByArtist(artist));
-        model.addAttribute("artist",artist);
+        model.addAttribute("artist", artist);
         showSongs(id, model);
     }
 
-    public void addSongToPlaylist(int id, int songId,Model model) {
+    public void addSongToPlaylist(int id, int songId, Model model) {
         Playlist playlist = playlistRepo.findById(id);
         Set<Song> plSongs = playlist.getPlaylistSongs();
         Song song = songRepo.findById(songId);

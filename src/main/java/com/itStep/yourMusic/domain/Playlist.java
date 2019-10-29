@@ -1,26 +1,29 @@
 package com.itStep.yourMusic.domain;
 
+import org.hibernate.validator.constraints.Length;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
 @Entity
 public class Playlist {
-        @Id
-        @GeneratedValue(strategy= GenerationType.AUTO)
-        private Integer id;
-        private String name;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+    private String name;
 
-        @ManyToOne(fetch = FetchType.LAZY)
-        @JoinColumn(name="user_id")
-        private User author;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User author;
 
     @ManyToMany
-    @JoinTable(name="playlist_song",
-    joinColumns=@JoinColumn(name="playlist_id"),
-    inverseJoinColumns = @JoinColumn(name="song_id"))
-    private Set<Song> playlistSongs=new HashSet<>();
+    @JoinTable(name = "playlist_song",
+            joinColumns = @JoinColumn(name = "playlist_id"),
+            inverseJoinColumns = @JoinColumn(name = "song_id"))
+    private Set<Song> playlistSongs = new HashSet<>();
 
     public Set<Song> getPlaylistSongs() {
         return playlistSongs;
@@ -29,7 +32,6 @@ public class Playlist {
     public void setPlaylistSongs(Set<Song> playlistSongs) {
         this.playlistSongs = playlistSongs;
     }
-
 
 
     public User getAuthor() {
@@ -41,11 +43,11 @@ public class Playlist {
     }
 
 
-
     public Playlist(String name, User user) {
         this.name = name;
-        this.author=user;
+        this.author = user;
     }
+
     public Playlist() {
     }
 

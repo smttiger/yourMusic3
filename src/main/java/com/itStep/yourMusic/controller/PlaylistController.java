@@ -36,10 +36,7 @@ public class PlaylistController {
             Model model,
             @AuthenticationPrincipal User currentUser
     ) {
-
-
-        model.addAttribute("playlists", playlistService.createPlaylist(user,playlistName,currentUser));
-
+         playlistService.createPlaylist(user,playlistName,currentUser,model);
         return "playlists";
     }
 

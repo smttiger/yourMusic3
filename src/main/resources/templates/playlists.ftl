@@ -6,7 +6,15 @@
     <form method="post" action="/playlists/${currentUserId}">
         <input type="hidden" name="_csrf" value="${_csrf.token}"/>
         <div class="form-group row">
-            <input type="text" name="playlistName" placeholder="Enter name of playlist" size="35">
+            <input type="text" name="playlistName" placeholder="Enter name of playlist" size="35"
+            class="form-control ${(nameError??)?string('is-invalid','')}"/>
+
+            <#if nameError??>
+                        <div class="invalid-feedback">
+                        ${nameError}
+                        </div>
+                        </#if>
+                        </div>
             <button type="submit" class="btn btn-success ml-1">Create</button>
         </div>
     </form>
