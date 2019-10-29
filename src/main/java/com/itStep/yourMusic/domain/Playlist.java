@@ -9,7 +9,7 @@ import java.util.Set;
 public class Playlist {
         @Id
         @GeneratedValue(strategy= GenerationType.AUTO)
-        private Long id;
+        private Integer id;
         private String name;
 
         @ManyToOne(fetch = FetchType.LAZY)
@@ -49,11 +49,11 @@ public class Playlist {
     public Playlist() {
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

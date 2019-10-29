@@ -1,14 +1,18 @@
 package com.itStep.yourMusic.controller;
 
+import com.itStep.yourMusic.domain.Song;
 import com.itStep.yourMusic.service.SongService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+
+import javax.validation.Valid;
 
 @Controller
 public class SongController {
@@ -36,14 +40,11 @@ public class SongController {
 
     @PostMapping("upload")
     public String add(
-
-            @RequestParam String artist,
-            @RequestParam String name,
+            @Valid Song song,
+            BindingResult bindingResult,
             Model model,
             @RequestParam("file") MultipartFile file) {
-
-
-        songService.uploadSong(artist, name, model, file);
+        songService.uploadSong(song, bindingResult,model, file);
         return "upload";
     }
 

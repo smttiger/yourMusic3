@@ -11,6 +11,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
+import org.springframework.validation.BindingResult;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -55,9 +56,11 @@ public class UserService implements UserDetailsService {
             try {
                 mailSenderService.send(user.getEmail(), "Activation code", message);
                 model.addAttribute("mailReport", "Check your email and follow activation link");
+                model.addAttribute("alert","alert-success");
                 userRepo.save(user);
             } catch (Exception e) {
-                model.addAttribute("mailReport", "Enter valid email address and retry");
+                model.addAttribute("mailReport", "Enter existing email address and retry");
+                model.addAttribute("alert","alert-danger");
             }
         }
     }
@@ -109,6 +112,31 @@ public class UserService implements UserDetailsService {
         if (!StringUtils.isEmpty(password)){
             user.setPassword(password);
             userRepo.save(user);
+        }
+    }
+    public boolean checkUser(User user, BindingResult bindingResult, Model model, String passwordConfirm){
+        boolean isConfirmEmpty = StringUtils.isEmpty(passwordConfirm);
+        boolean differentPasswords=false;
+        if (isConfirmEmpty) {
+            model.addAttribute("password2Error", "Password confirmation can not be empty");
+        }
+        if (user.getPassword() != null && !user.getPassword().equals(passwordConfirm)) {
+            model.addAttribute("passwordError", "Passwords are different!");
+            model.addAttribute("passwordConf",passwordConfirm);
+            differentPasswords=true;
+        }
+        User userFromDb = findUser(user);
+        if (userFromDb != null) {
+            model.addAttribute("usernameError", "User with such username is already exists!");
+        }
+        if (isConfirmEmpty || bindingResult.hasErrors()||(userFromDb != null)||differentPasswords) {
+            Map<String, String> errors = ErrorService.getErrors(bindingResult);
+            model.mergeAttributes(errors);
+            model.addAttribute("user",user);
+            return false;
+        }
+        else {
+            return true;
         }
 
     }

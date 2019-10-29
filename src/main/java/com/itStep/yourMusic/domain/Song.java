@@ -1,6 +1,9 @@
 package com.itStep.yourMusic.domain;
 
+import org.hibernate.validator.constraints.Length;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -9,8 +12,12 @@ import java.util.Set;
 public class Song {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private Long id;
+    private Integer id;
+    @NotBlank(message = "Please, enter artist")
+    @Length(max=30, message = "The name of artist is too long")
     private String artist;
+    @NotBlank(message = "Please, enter name of the song")
+    @Length(max=50, message = "The name of song is too long")
     private String name;
     private String filename;
 
@@ -52,11 +59,11 @@ public class Song {
         this.name = name;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

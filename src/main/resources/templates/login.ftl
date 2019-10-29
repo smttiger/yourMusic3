@@ -4,7 +4,7 @@
 <@c.page>
     <#if message??>
         <div class="container mt-5">
-    <div class="alert alert-primary" role="alert">
+    <div class="alert ${alert}" role="alert">
         <h3>${message}</h3>
     </div>
         </div>

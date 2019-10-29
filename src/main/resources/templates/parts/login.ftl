@@ -1,24 +1,62 @@
 <#macro login path isRegisterForm>
     <form action="${path}" method="post">
         <div class="form-group row">
-            <label class="col-sm-2 col-form label">User Name</label>
+            <label class="col-sm-2 col-form label">Username</label>
             <div class="col-sm-5">
-                <input type="text" name="username" class="form-control" placeholder="Enter username"/>
+                <input type="text" name="username"
+                class="form-control ${(usernameError??)?string('is-invalid','')}" placeholder="Enter username"
+                value="<#if user??>${user.username}</#if>"/>
+                <#if usernameError??>
+                            <div class="invalid-feedback">
+                            ${usernameError}
+                            </div>
+                            </#if>
             </div>
         </div>
 
         <div class="form-group row">
             <label class="col-sm-2 col-form label">Password</label>
             <div class="col-sm-5">
-                <input type="password" name="password" class="form-control" placeholder="Enter password"/>
-            </div>
-        </div>
+                <input type="password" name="password"
+                class="form-control ${(passwordError??)?string('is-invalid','')}" placeholder="Enter password"
+                value="<#if user??>${user.password}</#if>"/>
+                <#if passwordError??>
+                                            <div class="invalid-feedback">
+                                            ${passwordError}
+                                            </div>
+                                            </#if>
+             </div>
+         </div>
+
 <#if isRegisterForm>
+<div class="form-group row">
+        <label class="col-sm-2 col-form label">Password</label>
+        <div class="col-sm-5">
+            <input type="text" name="password2"
+            class="form-control ${(password2Error??)?string('is-invalid','')}" placeholder="Retype password"
+            value="<#if passwordConf??>${passwordConf}</#if>"/>
+            <#if password2Error??>
+                                                        <div class="invalid-feedback">
+                                                        ${password2Error}
+                                                        </div>
+                                                        </#if>
+                                        </div>
+        </div>
+
+
+
     <div class="form-group row">
     <label class="col-sm-2 col-form label">Email</label>
     <div class="col-sm-5">
-        <input type="email" name="email" class="form-control" placeholder="Enter email"/>
-    </div>
+        <input type="text" name="email"
+        class="form-control ${(emailError??)?string('is-invalid','')}" placeholder="Enter email"
+        value="<#if user??>${user.email}</#if>"/>
+        <#if emailError??>
+                                                    <div class="invalid-feedback">
+                                                    ${emailError}
+                                                    </div>
+                                                    </#if>
+                                    </div>
     </div>
 </#if>
         <input type="hidden" name="_csrf" value="${_csrf.token}"/>
