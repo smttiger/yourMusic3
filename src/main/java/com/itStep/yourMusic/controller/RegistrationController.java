@@ -38,8 +38,8 @@ public class RegistrationController {
             Model model) {
         if (userService.checkUser(user,bindingResult,model,password2)){
         userService.saveNewUser(user, model);
-        return ("mailReport");}
-        else{
+       return ("mailReport");}
+       else{
             return "registration";
         }
     }

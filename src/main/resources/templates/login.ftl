@@ -13,4 +13,11 @@
     <div class="container mt-5">
     <@l.login "/login" false />
     </div>
+    <#if Session??&&Session.SPRING_SECURITY_LAST_EXCEPTION??>
+    <div class="container mt-5">
+        <div class="alert alert-danger" role="alert">
+            <h3>Username or password is incorrect</h3>
+        </div>
+            </div>
+        </#if>
 </@c.page>

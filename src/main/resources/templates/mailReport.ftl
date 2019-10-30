@@ -1,11 +1,9 @@
 <#import "parts/common.ftl" as c>
 <@c.page>
 
-
-
     <div class="container mt-5">
         <div class="alert ${alert}" role="alert">
-            <h5>${mailReport}</h5>
+            <h3>${mailReport}</h3>
         </div>
     </div>
 </@c.page>

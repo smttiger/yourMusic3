@@ -29,7 +29,11 @@ public class UserService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return userRepo.findByUsername(username);
+        User user= userRepo.findByUsername(username);
+        if (user==null){
+            throw new UsernameNotFoundException("User not found");
+        }
+        return user;
     }
 
     public User findUser(User user) {
@@ -56,11 +60,11 @@ public class UserService implements UserDetailsService {
             try {
                 mailSenderService.send(user.getEmail(), "Activation code", message);
                 model.addAttribute("mailReport", "Check your email and follow activation link");
-                model.addAttribute("alert","alert-success");
+                model.addAttribute("alert", "alert-success");
                 userRepo.save(user);
             } catch (Exception e) {
                 model.addAttribute("mailReport", "Enter existing email address and retry");
-                model.addAttribute("alert","alert-danger");
+                model.addAttribute("alert", "alert-danger");
             }
         }
     }
@@ -97,47 +101,62 @@ public class UserService implements UserDetailsService {
         return true;
     }
 
-    public void updateProfile(User user, String password, String email, Model model) {
-        String userEmail=user.getEmail();
-        boolean isEmailChanged=(email!=null && !email.equals(userEmail)) ||
-                (userEmail!=null && !userEmail.equals(email));
-        if (isEmailChanged) {
-            user.setEmail(email);
-            if (!StringUtils.isEmpty(email)){
-                user.setActive(false);
-                user.setActivationCode(UUID.randomUUID().toString());
-                sendMessage(user, model);
-            }
-        }
-        if (!StringUtils.isEmpty(password)){
-            user.setPassword(password);
+    public void updatePassword(User user, String password, Model model) {
+
+        if (!StringUtils.isEmpty(password)) {
+            user.setPassword(passwordEncoder.encode(password));
             userRepo.save(user);
+            model.addAttribute("passwordReport","Password was successfully changed");
+        } else {
+            model.addAttribute("passwordError", "Password can not be empty");
         }
+        model.addAttribute("username", user.getUsername());
     }
-    public boolean checkUser(User user, BindingResult bindingResult, Model model, String passwordConfirm){
+
+    public boolean checkUser(User user, BindingResult bindingResult, Model model, String passwordConfirm) {
         boolean isConfirmEmpty = StringUtils.isEmpty(passwordConfirm);
-        boolean differentPasswords=false;
+        boolean differentPasswords = false;
         if (isConfirmEmpty) {
             model.addAttribute("password2Error", "Password confirmation can not be empty");
         }
         if (user.getPassword() != null && !user.getPassword().equals(passwordConfirm)) {
             model.addAttribute("passwordError", "Passwords are different!");
-            model.addAttribute("passwordConf",passwordConfirm);
-            differentPasswords=true;
+            model.addAttribute("passwordConf", passwordConfirm);
+            differentPasswords = true;
         }
         User userFromDb = findUser(user);
         if (userFromDb != null) {
             model.addAttribute("usernameError", "User with such username is already exists!");
         }
-        if (isConfirmEmpty || bindingResult.hasErrors()||(userFromDb != null)||differentPasswords) {
+        if (isConfirmEmpty || bindingResult.hasErrors() || (userFromDb != null) || differentPasswords) {
             Map<String, String> errors = ErrorService.getErrors(bindingResult);
             model.mergeAttributes(errors);
-            model.addAttribute("user",user);
+            model.addAttribute("user", user);
             return false;
-        }
-        else {
+        } else {
             return true;
         }
 
+    }
+
+    public void updateEmail(User user, String email, Model model) {
+        if (!email.contains("@")) {
+            model.addAttribute("emailError", "Email is not correct");
+            model.addAttribute("email", email);
+        }
+        if (StringUtils.isEmpty(email)) {
+            model.addAttribute("emailError", "Email can not be empty");
+        }
+        if (!StringUtils.isEmpty(email) && email.contains("@")) {
+            String userEmail = user.getEmail();
+            boolean isEmailChanged = (email != null && !email.equals(userEmail));// ||(userEmail!=null && !userEmail.equals(email));
+            if (isEmailChanged) {
+                user.setEmail(email);
+                user.setActive(false);
+                user.setActivationCode(UUID.randomUUID().toString());
+                sendMessage(user, model);
+            }
+        }
+        model.addAttribute("username", user.getUsername());
     }
 }

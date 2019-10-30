@@ -42,7 +42,7 @@
 <#if uploadReport??>
 <div class="container mt-5">
         <div class="alert ${alert}" role="alert">
-            ${uploadReport}
+           <h3> ${uploadReport}</h3>
         </div>
     </div>
     </#if>

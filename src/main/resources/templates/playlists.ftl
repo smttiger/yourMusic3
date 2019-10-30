@@ -21,7 +21,7 @@
     </div>
 
     <div class="container mt-5">
-    <h3>List of your playlists</h3>
+    <h3>List of your playlists:</h3>
     </div>
 
     <#list playlists as playlist>
