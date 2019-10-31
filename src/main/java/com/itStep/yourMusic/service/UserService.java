@@ -4,6 +4,8 @@ import com.itStep.yourMusic.domain.Role;
 import com.itStep.yourMusic.domain.User;
 import com.itStep.yourMusic.repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -82,8 +84,9 @@ public class UserService implements UserDetailsService {
         userRepo.save(user);
     }
 
-    public List<User> findAllUsers() {
-        return userRepo.findAll();
+
+    public Page<User> findALLUsers(Pageable pageable){
+        return userRepo.findAll(pageable);
     }
 
     public void deleteUser(User user) {

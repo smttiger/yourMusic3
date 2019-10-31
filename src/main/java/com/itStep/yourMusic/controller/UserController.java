@@ -4,6 +4,10 @@ import com.itStep.yourMusic.domain.Role;
 import com.itStep.yourMusic.domain.User;
 import com.itStep.yourMusic.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
@@ -22,8 +26,10 @@ public class UserController {
 
     @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping
-    public String userList(Model model) {
-        model.addAttribute("users", userService.findAllUsers());
+    public String userList(Model model,
+                           @PageableDefault(sort={"id"},direction = Sort.Direction.DESC) Pageable pageable) {
+        model.addAttribute("page", userService.findALLUsers(pageable));
+        model.addAttribute("url","/user");
         return "userList";
     }
 

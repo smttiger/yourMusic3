@@ -3,6 +3,9 @@ package com.itStep.yourMusic.controller;
 import com.itStep.yourMusic.domain.User;
 import com.itStep.yourMusic.service.PlaylistService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -76,9 +79,12 @@ public class PlaylistController {
     @GetMapping("/playlists/{user}/{playlistId}/search")
     public String search(@RequestParam String artist,
                          @PathVariable(name = "playlistId") int id,
-                         Model model) {
+                         Model model,
+                         @PageableDefault(sort={"id"},direction = Sort.Direction.DESC) Pageable pageable
+    ) {
 
-        playlistService.searchByArtist(artist,id,model);
+       playlistService.searchByArtist(artist,id,model);
+        //playlistService.searchByArtist(artist,id,model,pageable);
         return "plSongs";
     }
 

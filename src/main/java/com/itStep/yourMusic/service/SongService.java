@@ -4,6 +4,8 @@ import com.itStep.yourMusic.domain.Song;
 import com.itStep.yourMusic.repository.SongRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -25,6 +27,7 @@ public class SongService {
     private String uploadPath;
 
     private Iterable<Song> songs;
+    private Page<Song> pageSongs;
 
     public void uploadSong(
             Song song,
@@ -71,7 +74,14 @@ public class SongService {
         } else songs = songRepo.findAll();
         return songs;
     }
-
+    public void searchByArtist(String artist, Model model, Pageable pageable) {
+        if (artist != null && !artist.isEmpty()) {
+            pageSongs = songRepo.findByArtist(artist,pageable);
+        } else pageSongs = songRepo.findAll(pageable);
+        model.addAttribute("url","/playlists/{user}/{playlistId}/search");
+        model.addAttribute("page",pageSongs);
+        model.addAttribute("artist",artist);
+    }
     public Iterable<Song> searchByName(String name) {
         if (name != null && !name.isEmpty()) {
             songs = songRepo.findByName(name);

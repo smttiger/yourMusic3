@@ -6,6 +6,7 @@ import com.itStep.yourMusic.domain.User;
 import com.itStep.yourMusic.repository.PlaylistRepo;
 import com.itStep.yourMusic.repository.SongRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
@@ -35,11 +36,12 @@ public class PlaylistService {
     }
 
 
-    public void showSongs(int id, Model model) {
+        public void showSongs(int id, Model model) {
         Playlist playlist = playlistRepo.findById(id);
         model.addAttribute("playlistSongs", playlist.getPlaylistSongs());
         model.addAttribute("playlist", playlist);
     }
+
 
     public Set<Playlist> deletePlaylist(User user, int id) {
         Playlist playlist = playlistRepo.findById(id);
@@ -61,6 +63,11 @@ public class PlaylistService {
     public void searchByArtist(String artist, int id, Model model) {
         model.addAttribute("songs", songService.searchByArtist(artist));
         model.addAttribute("artist", artist);
+        showSongs(id, model);
+    }
+
+    public void searchByArtist(String artist, int id, Model model, Pageable pageable) {
+         songService.searchByArtist(artist,model, pageable);
         showSongs(id, model);
     }
 
