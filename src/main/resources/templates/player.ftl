@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
     <META NAME="ROBOTS" CONTENT="NOINDEX,NOFOLLOW">
     <title>Your music - player</title>
-
+    <link rel="stylesheet" href="/static/css/body.css">
     <link rel="stylesheet" media="screen" href="/static/css/reset.css"/>
     <link rel="stylesheet" media="screen" href="/static/css/mplayer.css"/>
 

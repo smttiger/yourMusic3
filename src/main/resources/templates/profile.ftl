@@ -25,7 +25,7 @@
                 <label class="col-sm-2 col-form label">Email</label>
                     <input type="text" name="email" class="form-control ${(emailError??)?string('is-invalid','')}"
                     placeholder="Enter new email"
-                    value="${email!''}"/>
+                    value="${email!''}" />
                 <#if emailError??>
                                         <div class="invalid-feedback">
                                         ${emailError}
