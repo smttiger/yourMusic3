@@ -2,7 +2,7 @@
     <form action="${path}" method="post">
         <div class="form-group row">
             <label class="col-sm-2 col-form label">Username</label>
-            <div class="col-sm-5">
+            <div class="col-sm-2">
                 <input type="text" name="username"
                 class="form-control ${(usernameError??)?string('is-invalid','')}" placeholder="Enter username"
                 value="<#if user??>${user.username}</#if>"/>
@@ -16,7 +16,7 @@
 
         <div class="form-group row">
             <label class="col-sm-2 col-form label">Password</label>
-            <div class="col-sm-5">
+            <div class="col-sm-2">
                 <input type="password" name="password"
                 class="form-control ${(passwordError??)?string('is-invalid','')}" placeholder="Enter password"
                 value="<#if user??>${user.password}</#if>"/>
@@ -31,7 +31,7 @@
 <#if isRegisterForm>
 <div class="form-group row">
         <label class="col-sm-2 col-form label">Password</label>
-        <div class="col-sm-5">
+        <div class="col-sm-2">
             <input type="password" name="password2"
             class="form-control ${(password2Error??)?string('is-invalid','')}" placeholder="Retype password"
             value="<#if passwordConf??>${passwordConf}</#if>"/>
@@ -47,7 +47,7 @@
 
     <div class="form-group row">
     <label class="col-sm-2 col-form label">Email</label>
-    <div class="col-sm-5">
+    <div class="col-sm-2">
         <input type="text" name="email"
         class="form-control ${(emailError??)?string('is-invalid','')}" placeholder="Enter email"
         value="<#if user??>${user.email}</#if>"/>

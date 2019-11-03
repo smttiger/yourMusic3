@@ -6,9 +6,10 @@
     <form method="post" action="/playlists/${currentUserId}">
         <input type="hidden" name="_csrf" value="${_csrf.token}"/>
         <div class="form-group row">
+            <div class="col-sm-4">
             <input type="text" name="playlistName" placeholder="Enter name of playlist" size="35"
             class="form-control ${(nameError??)?string('is-invalid','')}"/>
-
+        </div>
             <#if nameError??>
                         <div class="invalid-feedback">
                         ${nameError}

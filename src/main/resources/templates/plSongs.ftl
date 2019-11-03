@@ -22,7 +22,7 @@
         <form method="get" action="/playlists/${currentUserId}/${playlist.id}/search">
             <input type="hidden" name="_csrf" value="${_csrf.token}"/>
             <div class="form-group row">
-                <input type="text" name="artist" placeholder="Enter artist" size="50">
+                <input type="text" name="artist" placeholder="Enter artist" size="30">
                 <button type="submit" class="btn btn-primary ml-1">Search by artist</button>
             </div>
         </form>

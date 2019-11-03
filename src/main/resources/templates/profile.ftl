@@ -4,10 +4,10 @@
    <div class="container mt-5">
     <form  method="post" action="/user/profile/savePassword">
         <div class="form-group row">
-            <label class="col-sm-2 col-form label">Password</label>
+            <div class="col-sm-4">
                 <input type="password" name="password" class="form-control ${(passwordError??)?string('is-invalid','')}"
                 placeholder="Enter new password"/>
-
+            </div>
              <#if passwordError??>
                         <div class="invalid-feedback">
                         ${passwordError}
@@ -22,10 +22,11 @@
         <div class="container mt-5">
             <form  method="post" action="/user/profile/saveEmail">
             <div class="form-group row">
-                <label class="col-sm-2 col-form label">Email</label>
+                <div class="col-sm-4">
                     <input type="text" name="email" class="form-control ${(emailError??)?string('is-invalid','')}"
                     placeholder="Enter new email"
                     value="${email!''}" />
+                </div>
                 <#if emailError??>
                                         <div class="invalid-feedback">
                                         ${emailError}
