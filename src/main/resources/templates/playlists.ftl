@@ -2,28 +2,27 @@
 <#include "parts/security.ftl">
 <@c.page>
 
-    <div class="container mt-5">
+
     <form method="post" action="/playlists/${currentUserId}">
         <input type="hidden" name="_csrf" value="${_csrf.token}"/>
         <div class="form-group row">
             <div class="col-sm-4">
-            <input type="text" name="playlistName" placeholder="Enter name of playlist" size="35"
-            class="form-control ${(nameError??)?string('is-invalid','')}"/>
-        </div>
+                <input type="text" name="playlistName" placeholder="Enter name of playlist" size="35"
+                       class="form-control ${(nameError??)?string('is-invalid','')}"/>
             <#if nameError??>
-                        <div class="invalid-feedback">
-                        ${nameError}
-                        </div>
-                        </#if>
-                        </div>
-            <button type="submit" class="btn btn-success ml-1">Create</button>
-        </div>
+            <div class="invalid-feedback">
+                ${nameError}
+            </div>
+        </#if>
+</div>
+</div>
+<button type="submit" class="btn btn-success ml-1">Create</button>
     </form>
-    </div>
 
-    <div class="container mt-5">
+
+<div class="container mt-5">
     <h3>List of your playlists:</h3>
-    </div>
+</div>
 
 <div class="container mt-5">
     <table class="table table-hover">
@@ -37,7 +36,8 @@
         <tbody>
         <#list playlists as playlist>
         <tr>
-            <td><h5><b><a class="alert-link" href="/playlists/${currentUserId}/${playlist.id}">${playlist.name}</a></b></h5></td>
+            <td><h5><b><a class="alert-link" href="/playlists/${currentUserId}/${playlist.id}">${playlist.name}</a></b>
+            </h5></td>
             <td>
                 <form method="post" action="/playlists/${currentUserId}/${playlist.id}/delete">
                     <input type="hidden" name="_csrf" value="${_csrf.token}"/>
@@ -59,8 +59,6 @@
         </tbody>
     </table>
 </div>
-
-
 
 
 </@c.page>

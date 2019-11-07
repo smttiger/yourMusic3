@@ -32,7 +32,7 @@
 </div>
         <div class="form-group row">
 <div class="col-sm-3">
-    <input type="file" class="form-control ${(Error??)?string('is-invalid','')}" name="file" accept=".mp3">
+    <input type="file" class="form-control ${(Error??)?string('is-invalid','')}" name="file" accept=".mp3"/>
     <#if Error??>
     <div class="invalid-feedback">
         ${Error}
