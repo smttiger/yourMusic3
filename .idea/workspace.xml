@@ -2,26 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1bdbf51d-be67-41f7-8cc0-306cc09c1210" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com.itStep.yourMusic/LoginTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com.itStep.yourMusic/PLaylistControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com.itStep.yourMusic/SongControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/create-user-after.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/create-user-before.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/playlist-list-after.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/playlist-list-before.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com.itStep.yourMusic/MailSenderServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com.itStep.yourMusic/UserServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/search.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/search.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/plSongs.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/plSongs.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/player.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/player.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/playlists.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/playlists.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profile.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/upload.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/upload.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/userEdit.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/userEdit.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/common.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/common.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/pager.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/pager.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/domain/User.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -132,7 +119,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SongControllerTest.mainPageTest">
+  <component name="RunManager" selected="Application.Application">
     <configuration name="Application" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -148,7 +135,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MailSenderServiceTest.sendFailTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="yourMusic" />
       <extension name="coverage">
         <pattern>
@@ -157,29 +144,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.itStep.yourMusic" />
-      <option name="MAIN_CLASS_NAME" value="com.itStep.yourMusic.LoginTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginTest.correctLoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="yourMusic" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.itStep.yourMusic.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.itStep.yourMusic" />
-      <option name="MAIN_CLASS_NAME" value="com.itStep.yourMusic.LoginTest" />
-      <option name="METHOD_NAME" value="correctLoginTest" />
+      <option name="MAIN_CLASS_NAME" value="com.itStep.yourMusic.MailSenderServiceTest" />
+      <option name="METHOD_NAME" value="sendFailTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTest.incorrectLoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MailSenderServiceTest.sendSuccessTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="yourMusic" />
       <extension name="coverage">
         <pattern>
@@ -188,14 +160,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.itStep.yourMusic" />
-      <option name="MAIN_CLASS_NAME" value="com.itStep.yourMusic.LoginTest" />
-      <option name="METHOD_NAME" value="incorrectLoginTest" />
+      <option name="MAIN_CLASS_NAME" value="com.itStep.yourMusic.MailSenderServiceTest" />
+      <option name="METHOD_NAME" value="sendSuccessTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PLaylistControllerTest.userListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserServiceTest.activateUserNegativeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="yourMusic" />
       <extension name="coverage">
         <pattern>
@@ -204,14 +176,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.itStep.yourMusic" />
-      <option name="MAIN_CLASS_NAME" value="com.itStep.yourMusic.PLaylistControllerTest" />
-      <option name="METHOD_NAME" value="userListTest" />
+      <option name="MAIN_CLASS_NAME" value="com.itStep.yourMusic.UserServiceTest" />
+      <option name="METHOD_NAME" value="activateUserNegativeTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SongControllerTest.mainPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserServiceTest.activateUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="yourMusic" />
       <extension name="coverage">
         <pattern>
@@ -220,8 +192,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.itStep.yourMusic" />
-      <option name="MAIN_CLASS_NAME" value="com.itStep.yourMusic.SongControllerTest" />
-      <option name="METHOD_NAME" value="mainPageTest" />
+      <option name="MAIN_CLASS_NAME" value="com.itStep.yourMusic.UserServiceTest" />
+      <option name="METHOD_NAME" value="activateUserTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.saveNewUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="yourMusic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itStep.yourMusic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.itStep.yourMusic" />
+      <option name="MAIN_CLASS_NAME" value="com.itStep.yourMusic.UserServiceTest" />
+      <option name="METHOD_NAME" value="saveNewUserTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -236,11 +224,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SongControllerTest.mainPageTest" />
-        <item itemvalue="JUnit.LoginTest" />
-        <item itemvalue="JUnit.PLaylistControllerTest.userListTest" />
-        <item itemvalue="JUnit.LoginTest.incorrectLoginTest" />
-        <item itemvalue="JUnit.LoginTest.correctLoginTest" />
+        <item itemvalue="JUnit.UserServiceTest.saveNewUserTest" />
+        <item itemvalue="JUnit.MailSenderServiceTest.sendFailTest" />
+        <item itemvalue="JUnit.MailSenderServiceTest.sendSuccessTest" />
+        <item itemvalue="JUnit.UserServiceTest.activateUserNegativeTest" />
+        <item itemvalue="JUnit.UserServiceTest.activateUserTest" />
       </list>
     </recent_temporary>
   </component>
@@ -494,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572792897855</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="mockMVC tests  were added">
+      <created>1573136982571</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1573136982572</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -537,6 +532,7 @@
     <MESSAGE value="pagination to user list and rememberMe()  were added" />
     <MESSAGE value="background  was added" />
     <MESSAGE value="proper sizes of inputs  were added" />
-    <option name="LAST_COMMIT_MESSAGE" value="proper sizes of inputs  were added" />
+    <MESSAGE value="mockMVC tests  were added" />
+    <option name="LAST_COMMIT_MESSAGE" value="mockMVC tests  were added" />
   </component>
 </project>

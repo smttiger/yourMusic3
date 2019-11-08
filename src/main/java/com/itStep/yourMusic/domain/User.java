@@ -22,6 +22,8 @@ public class User implements UserDetails {
     private String password;
     private boolean isActive;
 
+    public User(){}
+
     public String getEmail() {
         return email;
     }
