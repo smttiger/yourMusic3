@@ -16,7 +16,7 @@
                 <a class="nav-link" href="/main">Search and listen</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/login">Login</a>
+                <a class="nav-link" href="/login">Log in</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/upload">Upload</a>

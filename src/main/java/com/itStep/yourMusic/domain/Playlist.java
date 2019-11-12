@@ -1,11 +1,6 @@
 package com.itStep.yourMusic.domain;
 
-import org.hibernate.validator.constraints.Length;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;

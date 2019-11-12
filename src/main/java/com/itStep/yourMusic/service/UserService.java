@@ -152,7 +152,7 @@ public class UserService implements UserDetailsService {
         }
         if (!StringUtils.isEmpty(email) && email.contains("@")) {
             String userEmail = user.getEmail();
-            boolean isEmailChanged = (email != null && !email.equals(userEmail));// ||(userEmail!=null && !userEmail.equals(email));
+            boolean isEmailChanged = (email != null && !email.equals(userEmail));
             if (isEmailChanged) {
                 user.setEmail(email);
                 user.setActive(false);

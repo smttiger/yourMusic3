@@ -79,12 +79,10 @@ public class PlaylistController {
     @GetMapping("/playlists/{user}/{playlistId}/search")
     public String search(@RequestParam String artist,
                          @PathVariable(name = "playlistId") int id,
-                         Model model,
-                         @PageableDefault(sort={"id"},direction = Sort.Direction.DESC) Pageable pageable
+                         Model model
     ) {
 
        playlistService.searchByArtist(artist,id,model);
-        //playlistService.searchByArtist(artist,id,model,pageable);
         return "plSongs";
     }
 
