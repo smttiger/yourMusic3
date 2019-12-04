@@ -26,9 +26,10 @@ public class UserController {
     @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping
     public String userList(Model model,
-                           @PageableDefault(sort={"id"},direction = Sort.Direction.DESC) Pageable pageable) {
+                           @PageableDefault(sort = {"username"}, direction = Sort.Direction.ASC)
+                                   Pageable pageable) {
         model.addAttribute("page", userService.findALLUsers(pageable));
-        model.addAttribute("url","/user");
+        model.addAttribute("url", "/user");
         return "userList";
     }
 
@@ -66,8 +67,8 @@ public class UserController {
     }
 
     @GetMapping("profile")
-    public String getProfile(Model model, @AuthenticationPrincipal User user){
-        model.addAttribute("username",user.getUsername());
+    public String getProfile(Model model, @AuthenticationPrincipal User user) {
+        model.addAttribute("username", user.getUsername());
         return "profile";
     }
 
@@ -77,18 +78,19 @@ public class UserController {
             @RequestParam String password,
 
             Model model
-    ){
-        userService.updatePassword(user, password,  model);
+    ) {
+        userService.updatePassword(user, password, model);
         return "profile";
     }
+
     @PostMapping("profile/saveEmail")
     public String updateEmail(
             @AuthenticationPrincipal User user,
             @RequestParam String email,
 
             Model model
-    ){
-        userService.updateEmail(user, email,  model);
+    ) {
+        userService.updateEmail(user, email, model);
         return "profile";
     }
 

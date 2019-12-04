@@ -10,7 +10,7 @@ known=Session.SPRING_SECURITY_CONTEXT??
     >
 <#else>
     <#assign
-    name="guest"
+    name=""
     currentUserId=-1
     isAdmin=false
 

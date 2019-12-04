@@ -29,10 +29,11 @@ public class UserService implements UserDetailsService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user= userRepo.findByUsername(username);
-        if (user==null){
+        User user = userRepo.findByUsername(username);
+        if (user == null) {
             throw new UsernameNotFoundException("User not found");
         }
         return user;
@@ -61,11 +62,11 @@ public class UserService implements UserDetailsService {
             );
             try {
                 mailSenderService.send(user.getEmail(), "Activation code", message);
-                model.addAttribute("mailReport", "Check your email and follow activation link");
+                model.addAttribute("mailReportSuccess", "Check your email and follow activation link");
                 model.addAttribute("alert", "alert-success");
                 userRepo.save(user);
             } catch (Exception e) {
-                model.addAttribute("mailReport", "Enter existing email address and retry");
+                model.addAttribute("mailReportFail", "Enter existing email address and retry");
                 model.addAttribute("alert", "alert-danger");
             }
         }
@@ -85,7 +86,7 @@ public class UserService implements UserDetailsService {
     }
 
 
-    public Page<User> findALLUsers(Pageable pageable){
+    public Page<User> findALLUsers(Pageable pageable) {
         return userRepo.findAll(pageable);
     }
 
@@ -109,7 +110,7 @@ public class UserService implements UserDetailsService {
         if (!StringUtils.isEmpty(password)) {
             user.setPassword(passwordEncoder.encode(password));
             userRepo.save(user);
-            model.addAttribute("passwordReport","Password was successfully changed");
+            model.addAttribute("passwordReport", "Password was successfully changed");
         } else {
             model.addAttribute("passwordError", "Password can not be empty");
         }
@@ -123,13 +124,13 @@ public class UserService implements UserDetailsService {
             model.addAttribute("password2Error", "Password confirmation can not be empty");
         }
         if (user.getPassword() != null && !user.getPassword().equals(passwordConfirm)) {
-            model.addAttribute("passwordError", "Passwords are different!");
+            model.addAttribute("passwordDiffError", "Passwords are different");
             model.addAttribute("passwordConf", passwordConfirm);
             differentPasswords = true;
         }
         User userFromDb = findUser(user);
         if (userFromDb != null) {
-            model.addAttribute("usernameError", "User with such username is already exists!");
+            model.addAttribute("usernameExistsError", "User with such username is already exists");
         }
         if (isConfirmEmpty || bindingResult.hasErrors() || (userFromDb != null) || differentPasswords) {
             Map<String, String> errors = ErrorService.getErrors(bindingResult);

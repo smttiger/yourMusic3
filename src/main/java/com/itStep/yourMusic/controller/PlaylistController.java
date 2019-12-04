@@ -3,9 +3,6 @@ package com.itStep.yourMusic.controller;
 import com.itStep.yourMusic.domain.User;
 import com.itStep.yourMusic.service.PlaylistService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,34 +20,38 @@ public class PlaylistController {
 
     @GetMapping("/playlists/{user}")
     public String userPlaylists(
-
+            @AuthenticationPrincipal User currentUser,
             @PathVariable User user,
             Model model
     ) {
-
-        model.addAttribute("playlists", user.getPlaylists());
-        return "playlists";
+        if (user.equals(currentUser)) {
+            model.addAttribute("playlists", user.getPlaylists());
+            return "playlists";
+        } else return "greeting";
     }
 
     @PostMapping("/playlists/{user}")
     public String createPlaylist(
             @PathVariable User user,
             @RequestParam String playlistName,
-            Model model,
-            @AuthenticationPrincipal User currentUser
+            Model model
     ) {
-         playlistService.createPlaylist(user,playlistName,currentUser,model);
+        playlistService.createPlaylist(user, playlistName, model);
         return "playlists";
     }
 
     @GetMapping("/playlists/{user}/{id}")
     public String playlistSongs(
-            @PathVariable(name = "id") int id,
+            @AuthenticationPrincipal User currentUser,
+            @PathVariable int id,
+            @PathVariable User user,
             Model model
-    ) {
 
-        playlistService.showSongs(id, model);
-        return "plSongs";
+    ) {
+        if (user.equals(currentUser)) {
+            playlistService.showSongs(id, model);
+            return "plSongs";
+        } else return "greeting";
     }
 
 
@@ -61,28 +62,60 @@ public class PlaylistController {
             Model model
     ) {
 
-        model.addAttribute("playlists", playlistService.deletePlaylist(user,id));
+        model.addAttribute("playlists", playlistService.deletePlaylist(user, id));
         return "playlists";
     }
 
     @PostMapping("/playlists/{UserId}/{playlistId}/{songId}/delete")
     public String deleteSongFromPlaylist(
+            @RequestParam(required = false) String songName,
+            @RequestParam(required = false) String artist,
             @PathVariable(name = "playlistId") int id,
-            @PathVariable(name = "songId") int songId,
+            @PathVariable int songId,
+            Model model
+    ) {
+        playlistService.deleteSongFromPlaylist(id, songId, model);
+        if (artist != null) {
+            playlistService.searchByArtist(artist, id, model);
+        }
+        if (songName != null) {
+            playlistService.searchByName(songName, id, model);
+        }
+        return "plsongs";
+    }
+
+    @GetMapping("/playlists/{user}/{playlistId}/{songId}/delete")
+    public String deleteSongFromPlaylistGet(
+            @AuthenticationPrincipal User currentUser,
+            @PathVariable User user,
+            @PathVariable(name = "playlistId") int id,
             Model model
     ) {
 
-        playlistService.deleteSongFromPlaylist(id,songId,model);
-        return "plsongs";
+        if (user.equals(currentUser)) {
+            playlistService.showSongs(id, model);
+            return "plsongs";
+        } else return "greeting";
     }
 
     @GetMapping("/playlists/{user}/{playlistId}/search")
     public String search(@RequestParam String artist,
                          @PathVariable(name = "playlistId") int id,
                          Model model
+
     ) {
 
-       playlistService.searchByArtist(artist,id,model);
+        playlistService.searchByArtist(artist, id, model);
+        return "plSongs";
+    }
+
+    @GetMapping("/playlists/{user}/{playlistId}/searchByName")
+    public String searchByName(@RequestParam String songName,
+                               @PathVariable(name = "playlistId") int id,
+                               Model model
+    ) {
+
+        playlistService.searchByName(songName, id, model);
         return "plSongs";
     }
 
@@ -98,17 +131,36 @@ public class PlaylistController {
 
     @PostMapping("/playlists/{UserId}/{playlistId}/{songId}/add")
     public String addSongToPlaylist(
-            @RequestParam String artist,
+            @RequestParam(required = false) String artist,
+            @RequestParam(required = false) String songName,
             @PathVariable(name = "playlistId") int id,
-            @PathVariable(name = "songId") int songId,
+            @PathVariable int songId,
             Model model
     ) {
 
-        playlistService.addSongToPlaylist(id,songId,model);
-            playlistService.searchByArtist(artist,id,model);
+        playlistService.addSongToPlaylist(id, songId, model);
+        if (artist != null) {
+            playlistService.searchByArtist(artist, id, model);
+        }
+        if (songName != null) {
+            playlistService.searchByName(songName, id, model);
+        }
         return "plSongs";
     }
 
+    @GetMapping("/playlists/{user}/{playlistId}/{songId}/add")
+    public String addSongToPlaylistGet(
+            @AuthenticationPrincipal User currentUser,
+            @PathVariable User user,
+            @PathVariable(name = "playlistId") int id,
+            Model model
+    ) {
+
+        if (user.equals(currentUser)) {
+            playlistService.showSongs(id, model);
+            return "plsongs";
+        } else return "greeting";
+    }
 
 }
 

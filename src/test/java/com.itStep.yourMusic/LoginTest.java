@@ -49,16 +49,16 @@ public class LoginTest {
     }
 
     @Test
-    public void correctLoginTest() throws Exception{
+    public void correctLoginTest() throws Exception {
         this.mockMvc.perform(formLogin().user("admin").password("admin"))
                 .andDo(print())
                 .andExpect(status().is3xxRedirection())
-                .andExpect(redirectedUrl("/"));
+                .andExpect(redirectedUrl("/main"));
     }
 
     @Test
-    public void incorrectLoginTest() throws Exception{
-        this.mockMvc.perform(post("/login").param("user","noName"))
+    public void incorrectLoginTest() throws Exception {
+        this.mockMvc.perform(post("/login").param("user", "noName"))
                 .andDo(print())
                 .andExpect(status().isForbidden());
     }

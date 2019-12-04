@@ -1,5 +1,6 @@
 <#import "parts/common.ftl" as c>
 <#import "parts/pager.ftl" as p>
+<#import "/spring.ftl" as spring/>
 <@c.page>
 
 <@p.pager url page />
@@ -8,10 +9,10 @@
     <table class="table table-hover">
         <thead class="thead-inverse">
         <tr>
-            <th>Name</th>
-            <th>Role</th>
-            <th>Action</th>
-            <th>Action</th>
+            <th><@spring.message "userList.name"/></th>
+            <th><@spring.message "userList.roles"/></th>
+            <th><@spring.message "playlist.c2"/></th>
+            <th><@spring.message "playlist.c2"/></th>
         </tr>
         </thead>
         <tbody>
@@ -22,13 +23,13 @@
             <td>
                 <form action="/user/${user.id}/Edit" method="get">
                     <input type="hidden" name="_csrf" value="${_csrf.token}"/>
-                    <button type="submit" class="btn btn-success ml-1">Edit</button>
+                    <button type="submit" class="btn btn-success ml-1"><@spring.message "userList.edit"/></button>
                 </form>
             </td>
             <td>
                 <form action="/user/${user.id}/Delete" method="post">
                     <input type="hidden" name="_csrf" value="${_csrf.token}"/>
-                    <button type="submit" class="btn btn-danger ml-1">Delete</button>
+                    <button type="submit" class="btn btn-danger ml-1"><@spring.message "playlist.b2"/></button>
                 </form>
             </td>
         </tr>

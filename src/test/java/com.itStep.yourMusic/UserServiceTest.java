@@ -67,12 +67,12 @@ public class UserServiceTest {
         Assert.assertNotNull(user.getActivationCode());
         Assert.assertTrue(CoreMatchers.is(user.getRoles()).matches(Collections.singleton(Role.USER)));
 
-        Mockito.verify(mailSenderService,Mockito.times(1)).send(
+        Mockito.verify(mailSenderService, Mockito.times(1)).send(
                 ArgumentMatchers.eq(user.getEmail()),
                 ArgumentMatchers.anyString(),
                 ArgumentMatchers.anyString()
         );
 
-        Mockito.verify(userRepo,Mockito.times(1)).save(user);
+        Mockito.verify(userRepo, Mockito.times(1)).save(user);
     }
 }

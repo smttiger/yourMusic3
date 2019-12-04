@@ -1,7 +1,5 @@
 package com.itStep.yourMusic.domain;
 
-import org.hibernate.validator.constraints.Length;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.util.HashSet;
@@ -11,28 +9,26 @@ import java.util.Set;
 @Entity
 public class Song {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     @NotBlank(message = "Please, enter artist")
-    @Length(max=30, message = "The name of artist is too long")
     private String artist;
     @NotBlank(message = "Please, enter name of the song")
-    @Length(max=50, message = "The name of song is too long")
     private String name;
     private String filename;
 
 
-
     @ManyToMany
-    @JoinTable(name="playlist_song",
-    joinColumns = @JoinColumn(name="song_id"),
-    inverseJoinColumns = @JoinColumn(name="playlist_id"))
-    private Set<Playlist> songPlaylists=new HashSet<>();
+    @JoinTable(name = "playlist_song",
+            joinColumns = @JoinColumn(name = "song_id"),
+            inverseJoinColumns = @JoinColumn(name = "playlist_id"))
+    private Set<Playlist> songPlaylists = new HashSet<>();
 
     public Song(String artist, String name) {
         this.artist = artist;
         this.name = name;
     }
+
     public Set<Playlist> getSongPlaylists() {
         return songPlaylists;
     }
@@ -41,7 +37,8 @@ public class Song {
         this.songPlaylists = songPlaylists;
     }
 
-    public Song(){}
+    public Song() {
+    }
 
     public String getArtist() {
         return artist;

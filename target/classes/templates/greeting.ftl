@@ -1,8 +1,12 @@
 <#import "parts/common.ftl" as c>
-
+<#import "/spring.ftl" as spring/>
 <@c.page>
-    <br>
-<h1>Welcome to Your Music!</h1>
-    <br>
-<div><h3>Enjoy listening every day...</h3></div>
+
+<div class="container mt-5">
+<h1><@spring.message "greeting"/></h1>
+</div>
+
+<div class="container mt-5">
+    <h3><@spring.message "greeting.words"/></h3>
+</div>
 </@c.page>

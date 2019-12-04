@@ -20,12 +20,6 @@ public class RegistrationController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/login")
-    public String login() {
-        return "login";
-    }
-
-
     @GetMapping("/registration")
     public String registration() {
         return "registration";
@@ -37,10 +31,10 @@ public class RegistrationController {
             @Valid User user,
             BindingResult bindingResult,
             Model model) {
-        if (userService.checkUser(user,bindingResult,model,password2)){
-        userService.saveNewUser(user, model);
-       return ("mailReport");}
-       else{
+        if (userService.checkUser(user, bindingResult, model, password2)) {
+            userService.saveNewUser(user, model);
+            return ("mailReport");
+        } else {
             return "registration";
         }
     }
@@ -49,11 +43,11 @@ public class RegistrationController {
     public String activate(Model model, @PathVariable String code) {
         boolean isActivated = userService.activateUser(code);
         if (isActivated) {
-            model.addAttribute("message", "Your account was successfully activated!");
-            model.addAttribute("alert","alert-success");
+            model.addAttribute("messageSuccess", "Your account was successfully activated!");
+            model.addAttribute("alert", "alert-success");
         } else {
-            model.addAttribute("message", "Activation code is not found");
-            model.addAttribute("alert","alert-danger");
+            model.addAttribute("messageFail", "Activation code is not found");
+            model.addAttribute("alert", "alert-danger");
         }
         return "login";
     }

@@ -13,16 +13,18 @@ import java.util.Set;
 @Entity
 @Table(name = "users")
 public class User implements UserDetails {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @NotBlank(message = "Username cannot be empty")
+    @NotBlank(message = "Username can not be empty")
     private String username;
     @NotBlank(message = "Password cannot be empty")
     private String password;
     private boolean isActive;
 
-    public User(){}
+    public User() {
+    }
 
     public String getEmail() {
         return email;
@@ -52,8 +54,7 @@ public class User implements UserDetails {
     private Set<Role> roles;
 
 
-
-    @OneToMany(mappedBy = "author", cascade=CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<Playlist> playlists;
 
 
@@ -65,7 +66,7 @@ public class User implements UserDetails {
         this.playlists = playlists;
     }
 
-    public boolean isAdmin(){
+    public boolean isAdmin() {
         return roles.contains(Role.ADMIN);
     }
 

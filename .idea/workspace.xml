@@ -2,71 +2,72 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1bdbf51d-be67-41f7-8cc0-306cc09c1210" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/audio/1fadc4b5-a221-4f08-a91a-39c23824766d12_Back In The Picture.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audio/28e5626b-e161-4984-9cff-2bafb334a98a01-the_rasmus-livin_in_a_world_without_you.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audio/37ece925-6074-4ae0-bf57-bb3ec5703f7e08_Guilty.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audio/d160a3b5-3b78-4922-941d-881938c9624417 Too Bad.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audio/10d65819-ba9c-40e2-9951-e59b5408638106-the_rasmus-run_to_you.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audio/2d2aefdb-3621-4ba6-bdae-45b48a91345d04-the_rasmus-justify.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audio/baaa76e3-03ed-49e4-816d-3c3c22b4297208-the_rasmus-lost_and_lonely.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audio/e7898f0c-a8cb-4393-92b3-08fbf2621c3909-the_rasmus-the_fight.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/messages.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/messages_en.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/messages_ru.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/04be878c-4d4d-4b3f-b0c7-3544b2ca494710_The One I Love.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/audio/e23aabe0-9633-4a9f-b216-b27470d6719e10_The One I Love.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/1449b046-cc15-4e4a-9fb1-dc4c809ed510Avril Lavigne - Complicated.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/audio/5d19f716-16f2-41a5-8c72-cb76dcb8a329Avril Lavigne - Complicated.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/257c3e9d-e68d-43ed-a2d9-f9bfc7601004Avril Lavigne - My World.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/2a3f6853-faa7-42ad-af75-86ed2754df76The Rasmus - Guilty.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/2b44c3aa-99b2-45d5-a55c-0d4d22486dafgreen day - 07. give me novacaine.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/audio/d9a4ca95-87ab-4638-b9aa-3a7c818ee83fgreen day - 07. give me novacaine.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/31ef9af5-5d48-42c1-8d93-089165cdf7d505-Heartbreaker.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/38ad60eb-a4f8-4389-8cdf-9f0d77da145d09 Throw Yourself Away.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/4d125222-1330-4e4b-b7a9-0c5fc41cabaf19 Never Again.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/audio/8d8d6d66-1d1d-46c0-bc41-61adfb70b12c02_First Day Of My Life.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/5b6956ff-4f81-4f5e-b980-677db9be8a7d04_In The Shadows.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/audio/5da4170f-3409-4010-b076-8a75af52d12004_In The Shadows.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/60784c42-4a5e-4332-80a4-d8df040425b5Avril Lavigne - Too Much To Ask.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/792ec409-71d1-4fa4-9f8d-a29aa0db8baa06 Because Of You.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/audio/1410972d-8986-4f17-a0fd-681edea5869d06 Because Of You.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/85f82a9a-3480-4889-ba88-d5ec89b300d205-Basketcase (live '96Tokyo).mp3" beforeDir="false" afterPath="$PROJECT_DIR$/audio/d64a7efd-e972-4439-81ca-681ec8f8201405-Basketcase (live '96Tokyo).mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/8c710dcd-dd0c-4500-976c-34c5a939ba99Avril Lavigne - Naked.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/91154a0d-de6f-4ed1-a2e2-157976ce264dAvril Lavigne - Things I`ll Never say.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/945de908-2dd2-4a6e-8afd-67d3b554d38902 Do This Anymore.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/9639fc5b-e020-4230-96a1-9826a46f5e79A. Lavigne - I Don't Give a Damn (American Pie 3).mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/965c579d-05c9-4bf8-babc-43ff6721b955The Rasmus - 13 - Track 13.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/9d951c31-54e3-4771-bf5f-29da87ae904bThe Rasmus - 11 - Track 11.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/9e4272e5-f82b-4b7a-a558-3c51ba997e58Avril Lavigne - Tomorrow.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/audio/dccabf36-22d7-4c7b-8f64-d17e15a417b0Avril Lavigne - Tomorrow.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/9e747df2-670d-4b7b-af32-786c5e939bd004 Believe It Or Not.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/a035c77e-10c1-42b1-bb33-2ebaf1410f7103 Someday.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/audio/a547b378-50fe-49de-be7e-2ddbcd04078903 Someday.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/a1743cf9-c529-4fd5-a0b9-2785c3f6a74agreen day - 04. boulevard of broken home.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/audio/baa49982-7b65-4005-a7c2-a54f597af5e9green day - 04. boulevard of broken home.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/a6618262-3b5f-4939-b89c-9b3bc7ca5c15The Rasmus - Back In The Picture.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/b999ac82-4b01-4ce9-acf2-dfc449d283ef07 Figured You Out.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/bcbef66c-0a9f-4902-8c45-ce04f857ccac11 See You At The Show.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/audio/b9f9bf8b-0189-4e20-ba5e-5ae0459001f411 See You At The Show.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/c4d8126f-8505-4497-ad49-9db6e9e9ecccAvril Lavigne - Anything But Ordinary.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/audio/fcced9cb-2d5f-412a-a3ae-fa830e958668Avril Lavigne - Anything But Ordinary.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/c7d9b810-289d-4221-92a4-e7ca7d774a4dgreen day - 11. wake me up when september ends.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/audio/5ae28f40-d72f-468f-b571-41f76ecc0c70green day - 11. wake me up when september ends.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/d0c2cb87-4370-4eba-b293-e78cdeecdbe5Avril Lavigne - Sk8er Boi.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/audio/d6d35a6f-2188-4c48-9e78-fd40a105173eAvril Lavigne - Sk8er Boi.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/e106e492-4c31-4329-8091-d70558452745The Rasmus - In My Life.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/e11eeff8-0d49-477c-8afd-43ba7af8ebc8Avril Lavigne - Nobody`s Fool Ask.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/e287c648-9e21-4f67-99bf-25de744619e716 How you remind me (Bonus Track).mp3" beforeDir="false" afterPath="$PROJECT_DIR$/audio/f0cfe0e4-2ac8-4c33-bd04-024d22763d6616 How you remind me (Bonus Track).mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/e37269ed-f5de-4668-b3b2-566c33d94b4001 Flat On The Floor.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/eac80f03-eb78-4d18-b848-dbc37bcb01f9The Rasmus - 12 - Track 12.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/ee61f148-9961-4b5b-bc67-c32ee00d4893Avril Lavigne - Losing Grip.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/audio/10bd91e2-05b9-4bf8-8cc5-7f047f35d3d7Avril Lavigne - Losing Grip.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/eea7e37d-bf85-4912-ba07-d284d5d590c9green day - 09. extraordinary girl.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/audio/3667fe78-f1f5-4b89-9381-87c5e03f727agreen day - 09. extraordinary girl.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/f3522e44-0b1e-4a00-9824-1fbe4b9a5848The Rasmus - Days.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/f72dbb8a-6edf-41a8-96c5-36a76fed9f3aAvril Lavigne - I`m With You.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/f9f23229-28e5-4dc2-a323-c7c2a0109ad7Avril Lavigne - Mobile.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/Config/MailConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/Config/MailConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/Config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/Config/MvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/Config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/Config/WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/controller/PlaylistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/controller/PlaylistController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/controller/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/controller/SongController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/controller/SongController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/domain/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/domain/Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/domain/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/domain/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/domain/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/domain/Song.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/repository/PlaylistRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/repository/PlaylistRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/repository/SongRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/repository/SongRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/repository/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/repository/UserRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/service/ErrorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/service/ErrorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/service/MailSenderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/service/MailSenderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/service/PlaylistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/service/PlaylistService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/service/SongService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/service/SongService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itStep/yourMusic/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/greeting.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mailReport.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mailReport.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/login.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/pager.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/pager.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/search.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/search.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/security.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/security.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/plSongs.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/plSongs.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/player.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/player.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/playlists.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/playlists.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profile.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/search results.ftl" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/upload.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/upload.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/userEdit.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/userEdit.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/userList.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/userList.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com.itStep.yourMusic/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.itStep.yourMusic/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com.itStep.yourMusic/MailSenderServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.itStep.yourMusic/MailSenderServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com.itStep.yourMusic/PLaylistControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.itStep.yourMusic/PLaylistControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com.itStep.yourMusic/SongControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.itStep.yourMusic/SongControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com.itStep.yourMusic/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.itStep.yourMusic/UserServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/application-test.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/Config/MvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/Config/MvcConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/Config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/Config/WebSecurityConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/controller/RegistrationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/controller/RegistrationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/repository/SongRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/repository/SongRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/controller/SongController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/controller/SongController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/domain/Song.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/domain/Song.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itStep/yourMusic/domain/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/greeting.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/greeting.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/common.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/common.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/login.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/registration.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/registration.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/search results.ftl" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -121,8 +122,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -154,7 +155,7 @@
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569435845286" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -193,7 +194,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MailSenderServiceTest.sendFailTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginTest.correctLoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="yourMusic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itStep.yourMusic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.itStep.yourMusic" />
+      <option name="MAIN_CLASS_NAME" value="com.itStep.yourMusic.LoginTest" />
+      <option name="METHOD_NAME" value="correctLoginTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MailSenderServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="yourMusic" />
       <extension name="coverage">
         <pattern>
@@ -203,29 +220,12 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.itStep.yourMusic" />
       <option name="MAIN_CLASS_NAME" value="com.itStep.yourMusic.MailSenderServiceTest" />
-      <option name="METHOD_NAME" value="sendFailTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MailSenderServiceTest.sendSuccessTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="yourMusic" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.itStep.yourMusic.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.itStep.yourMusic" />
-      <option name="MAIN_CLASS_NAME" value="com.itStep.yourMusic.MailSenderServiceTest" />
-      <option name="METHOD_NAME" value="sendSuccessTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PLaylistControllerTest.userListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PLaylistControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="yourMusic" />
       <extension name="coverage">
         <pattern>
@@ -235,13 +235,27 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.itStep.yourMusic" />
       <option name="MAIN_CLASS_NAME" value="com.itStep.yourMusic.PLaylistControllerTest" />
-      <option name="METHOD_NAME" value="userListTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceTest.activateUserNegativeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SongControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="yourMusic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itStep.yourMusic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.itStep.yourMusic" />
+      <option name="MAIN_CLASS_NAME" value="com.itStep.yourMusic.SongControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="yourMusic" />
       <extension name="coverage">
         <pattern>
@@ -251,24 +265,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.itStep.yourMusic" />
       <option name="MAIN_CLASS_NAME" value="com.itStep.yourMusic.UserServiceTest" />
-      <option name="METHOD_NAME" value="activateUserNegativeTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserServiceTest.saveNewUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="yourMusic" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.itStep.yourMusic.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.itStep.yourMusic" />
-      <option name="MAIN_CLASS_NAME" value="com.itStep.yourMusic.UserServiceTest" />
-      <option name="METHOD_NAME" value="saveNewUserTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -282,11 +279,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PLaylistControllerTest.userListTest" />
-        <item itemvalue="JUnit.UserServiceTest.saveNewUserTest" />
-        <item itemvalue="JUnit.MailSenderServiceTest.sendFailTest" />
-        <item itemvalue="JUnit.MailSenderServiceTest.sendSuccessTest" />
-        <item itemvalue="JUnit.UserServiceTest.activateUserNegativeTest" />
+        <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="JUnit.SongControllerTest" />
+        <item itemvalue="JUnit.PLaylistControllerTest" />
+        <item itemvalue="JUnit.MailSenderServiceTest" />
+        <item itemvalue="JUnit.LoginTest.correctLoginTest" />
       </list>
     </recent_temporary>
   </component>
@@ -554,7 +551,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573213977931</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="final edition">
+      <created>1573556714725</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1573556714725</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -599,6 +603,7 @@
     <MESSAGE value="proper sizes of inputs  were added" />
     <MESSAGE value="mockMVC tests  were added" />
     <MESSAGE value="junit tests  were added" />
-    <option name="LAST_COMMIT_MESSAGE" value="junit tests  were added" />
+    <MESSAGE value="final edition" />
+    <option name="LAST_COMMIT_MESSAGE" value="final edition" />
   </component>
 </project>

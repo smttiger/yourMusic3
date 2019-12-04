@@ -44,7 +44,7 @@ public class SongController {
             BindingResult bindingResult,
             Model model,
             @RequestParam("file") MultipartFile file) {
-        songService.uploadSong(song, bindingResult,model, file);
+        songService.uploadSong(song, bindingResult, model, file);
         return "upload";
     }
 
@@ -52,13 +52,14 @@ public class SongController {
     public String search(@RequestParam String artist, Model model) {
 
         model.addAttribute("playlistSongs", songService.searchByArtist(artist));
+        model.addAttribute("artist", artist);
         return "player";
     }
 
     @GetMapping("searchByName")
-    public String searchByName(@RequestParam String name, Model model) {
-
-        model.addAttribute("playlistSongs", songService.searchByName(name));
+    public String searchByName(@RequestParam String songName, Model model) {
+        model.addAttribute("songName", songName);
+        model.addAttribute("playlistSongs", songService.searchByName(songName));
         return "player";
     }
 

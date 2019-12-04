@@ -1,4 +1,5 @@
 <#import "parts/common.ftl" as c>
+<#import "/spring.ftl" as spring/>
 <@c.page>
 <h5>${username}</h5>
 <div class="container mt-5">
@@ -6,16 +7,16 @@
         <div class="form-group row">
             <div class="col-sm-4">
                 <input type="password" name="password" class="form-control ${(passwordError??)?string('is-invalid','')}"
-                       placeholder="Enter new password"/>
+                       placeholder="<@spring.message "profile.place1"/>"/>
                 <#if passwordError??>
                 <div class="invalid-feedback">
-                    ${passwordError}
+                    <@spring.message "passwordError"/>
                 </div>
             </#if>
         </div>
 </div>
 <input type="hidden" name="_csrf" value="${_csrf.token}"/>
-<button class="btn btn-success" type="submit">Save new password</button>
+<button class="btn btn-success" type="submit"><@spring.message "profile.b1"/></button>
 </form>
 </div>
 
@@ -24,30 +25,32 @@
         <div class="form-group row">
             <div class="col-sm-4">
                 <input type="text" name="email" class="form-control ${(emailError??)?string('is-invalid','')}"
-                       placeholder="Enter new email"
+                       placeholder="<@spring.message "profile.place2"/>"
                        value="${email!''}"/>
             <#if emailError??>
             <div class="invalid-feedback">
-                ${emailError}
+                <@spring.message "emailError"/>
             </div>
         </#if>
 </div></div>
 <input type="hidden" name="_csrf" value="${_csrf.token}"/>
-<button class="btn btn-success" type="submit">Save new email</button>
+<button class="btn btn-success" type="submit"><@spring.message "profile.b2"/></button>
 </form>
 </div>
 
-<#if passwordReport??>
+
+    <#if mailReportSuccess??>
 <div class="row mt-5">
-    <div class="alert alert-success" role="alert">
-        <h5>${passwordReport}</h5>
+    <div class="alert ${alert}" role="alert">
+        <h3><@spring.message "mailReportSuccess"/></h3>
     </div>
 </div>
 </#if>
-<#if mailReport??>
+
+    <#if mailReportFail??>
 <div class="row mt-5">
     <div class="alert ${alert}" role="alert">
-        <h5>${mailReport}</h5>
+        <h3><@spring.message "mailReportFail"/></h3>
     </div>
 </div>
 </#if>

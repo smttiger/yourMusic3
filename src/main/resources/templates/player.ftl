@@ -1,4 +1,5 @@
-﻿<!DOCTYPE HTML>
+﻿<#import "/spring.ftl" as spring/>
+<!DOCTYPE HTML>
 <html>
 <head>
     <meta charset="UTF-8"/>
@@ -90,7 +91,7 @@
     arr.push(obj);
     <#else>
     var obj = {
-        "title": "There was not any song found"
+        "title": "<@spring.message "player"/>"
     };
     arr.push(obj);
     </#list>

@@ -24,8 +24,8 @@ public class PlaylistService {
     SongService songService;
 
     public void createPlaylist(User user, String playlistName,
-                               User currentUser, Model model) {
-        Playlist playlist = new Playlist(playlistName, currentUser);
+                               Model model) {
+        Playlist playlist = new Playlist(playlistName, user);
         if (StringUtils.isEmpty(playlistName)) {
             model.addAttribute("nameError", "Please, enter name of playlist");
         } else {
@@ -35,7 +35,7 @@ public class PlaylistService {
     }
 
 
-        public void showSongs(int id, Model model) {
+    public void showSongs(int id, Model model) {
         Playlist playlist = playlistRepo.findById(id);
         model.addAttribute("playlistSongs", playlist.getPlaylistSongs());
         model.addAttribute("playlist", playlist);
@@ -66,6 +66,11 @@ public class PlaylistService {
     }
 
 
+    public void searchByName(String name, int id, Model model) {
+        model.addAttribute("songs", songService.searchByName(name));
+        model.addAttribute("songName", name);
+        showSongs(id, model);
+    }
 
     public void addSongToPlaylist(int id, int songId, Model model) {
         Playlist playlist = playlistRepo.findById(id);

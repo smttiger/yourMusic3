@@ -21,11 +21,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 @WithUserDetails("Masha")
 @TestPropertySource("/application-test.properties")
-@Sql(value = {"/create-user-before.sql","/playlist-list-before.sql"}, executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
-@Sql(value = { "/playlist-list-after.sql","/create-user-after.sql"}, executionPhase = Sql.ExecutionPhase.AFTER_TEST_METHOD)
+@Sql(value = {"/create-user-before.sql", "/playlist-list-before.sql"}, executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
+@Sql(value = {"/playlist-list-after.sql", "/create-user-after.sql"}, executionPhase = Sql.ExecutionPhase.AFTER_TEST_METHOD)
 public class PLaylistControllerTest {
     @Autowired
     private MockMvc mockMvc;
+
     @Test
     public void userListTest() throws Exception {
         this.mockMvc.perform(get("/playlists/1"))

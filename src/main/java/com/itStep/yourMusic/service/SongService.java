@@ -20,7 +20,6 @@ public class SongService {
     private SongRepo songRepo;
 
 
-
     @Value("${upload.path}")
     private String uploadPath;
 
@@ -35,16 +34,16 @@ public class SongService {
 
 
         if (file == null || file.getOriginalFilename().isEmpty()) {
-            model.addAttribute("Error","File is not chosen");
+            model.addAttribute("chosenError", "File is not chosen");
         } else if (!file.getOriginalFilename().endsWith("mp3")) {
-            model.addAttribute("Error","File is not mp3");
+            model.addAttribute("mp3Error", "File is not mp3");
         }
         if (bindingResult.hasErrors()) {
-            Map<String,String> errorsMap=ErrorService.getErrors(bindingResult);
+            Map<String, String> errorsMap = ErrorService.getErrors(bindingResult);
             model.mergeAttributes(errorsMap);
-            model.addAttribute("song",song);
+            model.addAttribute("song", song);
         } else {
-            if (file != null && !file.getOriginalFilename().isEmpty()&&file.getOriginalFilename().endsWith("mp3")) {
+            if (file != null && !file.getOriginalFilename().isEmpty() && file.getOriginalFilename().endsWith("mp3")) {
                 File uploadDir = new File(uploadPath);
                 if (!uploadDir.exists()) {
                     uploadDir.mkdir();
@@ -53,30 +52,31 @@ public class SongService {
                 String resultFilename = uuidFile + file.getOriginalFilename();
                 try {
                     file.transferTo(new File(uploadPath + "/" + resultFilename));
-                    model.addAttribute("uploadReport", "File was successfully uploaded, thank you!");
-                    model.addAttribute("alert","alert-success");
+                    model.addAttribute("uploadReportSuccess", "File was successfully uploaded, thank you!");
+                    model.addAttribute("alert", "alert-success");
                     song.setFilename(resultFilename);
                     song.setArtist(song.getArtist().toLowerCase());
                     song.setName(song.getName().toLowerCase());
                     songRepo.save(song);
-                    model.addAttribute("song",null);
+                    model.addAttribute("song", null);
                 } catch (IOException e) {
-                    model.addAttribute("uploadReport", "File was not uploaded, sorry, something went wrong.");
-                    model.addAttribute("alert","alert-danger");
+                    model.addAttribute("uploadReportFail", "File was not uploaded, sorry, something went wrong," +
+                            "probably file is too big");
+                    model.addAttribute("alert", "alert-danger");
                 }
             }
         }
     }
 
     public Iterable<Song> searchByArtist(String artist) {
-        if (artist != null && !artist.isEmpty()) {
+        if (artist != null) {
             songs = songRepo.findByArtistContaining(artist.toLowerCase());
         } else songs = songRepo.findAll();
         return songs;
     }
 
     public Iterable<Song> searchByName(String name) {
-        if (name != null && !name.isEmpty()) {
+        if (name != null) {
             songs = songRepo.findByNameContaining(name.toLowerCase());
         } else songs = songRepo.findAll();
         return songs;

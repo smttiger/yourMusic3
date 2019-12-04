@@ -1,4 +1,5 @@
 <#macro pager url page>
+<#import "/spring.ftl" as spring/>
 <#if page.getTotalPages() gt 7>
 <#assign
 totalPages = page.getTotalPages()
@@ -17,7 +18,7 @@ body = head + bodyBefore + (pageNumber > 3 && pageNumber < totalPages - 2)?then(
 <div class="mt-3">
     <ul class="pagination">
         <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1">Pages</a>
+            <a class="page-link" href="#" tabindex="-1"><@spring.message "pager.pages"/></a>
         </li>
         <#list body as p>
         <#if (p - 1) == page.getNumber()>
@@ -38,7 +39,7 @@ body = head + bodyBefore + (pageNumber > 3 && pageNumber < totalPages - 2)?then(
 
 <ul class="pagination">
     <li class="page-item disabled">
-        <a class="page-link" href="#" tabindex="-1">Items on page</a>
+        <a class="page-link" href="#" tabindex="-1"><@spring.message "pager.items"/></a>
     </li>
     <#list [5, 10, 25, 50] as c>
     <#if c == page.getSize()>

@@ -24,8 +24,9 @@ public class SongControllerTest {
     private MockMvc mockMvc;
     @Autowired
     private SongController songController;
+
     @Test
-    public void mainPageTest() throws Exception{
+    public void mainPageTest() throws Exception {
         this.mockMvc.perform(get("/main"))
                 .andDo(print())
                 .andExpect(SecurityMockMvcResultMatchers.authenticated())
